@@ -1335,7 +1335,7 @@ export default [
         protein: 0,
         caffeine: 0,
         allergy: "",
-        price: "미정",
+        price: "6300",
         thema: "summer",
         new: true,
         seasonalLimited: true,
