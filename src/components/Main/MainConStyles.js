@@ -67,14 +67,27 @@ export const Maincon1Wrap = styled.div`
 
 export const Maincon2Wrap = styled.div`
     width: 1520px;
-    background-color: #f6f5ef;
+    padding: 50px;
     margin: 0 auto;
+
     .con2Wrap {
         h3 {
             text-align: center;
-            margin: 50px 0;
+            margin: 20px 0;
             font-size: 40px;
             font-weight: bold;
+        }
+
+        .swiper {
+            width: 1520px;
+        }
+        .swiper-slide {
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            img {
+                width: 500px;
+            }
         }
     }
 `;
@@ -228,7 +241,6 @@ export const Maincon5Wrap = styled.div`
 
 export const Maincon6Wrap = styled.div`
     width: 100%;
-
 
     .inner {
         width: 1520px;
