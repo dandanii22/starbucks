@@ -3,12 +3,18 @@ import reset from 'styled-reset'
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-  /* other styles */
+    @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+    font-style: normal;
+}
   
-  body {
+body {
     font-size: 16px;
     line-height: 1.6;
-    font-family: 'Noto Sans KR', sans-serif;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-family: 'Pretendard-Regular', sans-serif;
     color:#333;
   }
   a {
