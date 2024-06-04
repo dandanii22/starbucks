@@ -1,17 +1,60 @@
+import { useState } from 'react';
 import { LoginWrap } from './LoginStyle';
-
 import { FaCheck } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../../store/modules/authSlice';
+
 const Login = () => {
+    const { authed } = useSelector((state) => state.authR);
+    const [user, setUser] = useState({
+        id: '',
+        password: '',
+    });
+
+    const { id, password } = user;
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const chageInput = (e) => {
+        const { name, value } = e.target;
+        setUser({
+            ...user,
+            [name]: value,
+        });
+    };
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        if (!id || !password) return;
+        dispatch(login(user));
+        {
+            authed ? navigate('/') : navigate('/login');
+        }
+    };
+
     return (
         <LoginWrap>
             <h3>로그인</h3>
             <img src="./images/login/bgLogo.png" alt="스타벅스 로고" />
-            <form className="loginForm">
+            <form onSubmit={onSubmit} className="loginForm">
                 <p className="greeting">
                     <span>Welcome!</span> 스타벅스 코리아에 오신 것을 환영합니다.
                 </p>
-                <input type="text" placeholder="아이디를 입력해주세요" />
-                <input type="text" placeholder="비밀번호를 입력해주세요" />
+                <input
+                    type="text"
+                    placeholder="아이디를 입력해주세요"
+                    name="id"
+                    value={id}
+                    onChange={chageInput}
+                />
+                <input
+                    type="password"
+                    placeholder="비밀번호를 입력해주세요"
+                    name="password"
+                    value={password}
+                    onChange={chageInput}
+                />
                 <div className="idKeep">
                     <input type="checkbox" name="keep" id="keep" />
                     <label htmlFor="keep">
@@ -28,7 +71,7 @@ const Login = () => {
                 </div>
 
                 <p>
-                    <button>로그인</button>
+                    <button type="submit">로그인</button>
                 </p>
             </form>
             <p className="attention">

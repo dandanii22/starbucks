@@ -70,6 +70,11 @@ export const LoginWrap = styled.div`
             width: 500px;
             line-height: 40px;
         }
+        input[type='password'] {
+            margin-top: 20px;
+            width: 500px;
+            line-height: 40px;
+        }
         .idKeep {
             margin-top: 30px;
             margin-left: -380px;
@@ -145,6 +150,7 @@ export const LogoutWrap = styled.div`
         text-align: center;
     }
     img {
+        display: block;
         margin: 100px auto;
     }
     button {
@@ -304,7 +310,8 @@ export const JoinWrap = styled.div`
             margin: 20px auto;
         }
 
-        input[type='text'] {
+        input[type='text'],
+        input[type='password'] {
             display: block;
             width: 600px;
             height: 60px;
@@ -363,35 +370,6 @@ export const JoinWrap = styled.div`
                         }
                     }
                 }
-
-                /* input[type='radio'] {
-                    position: absolute;
-
-                    overflow: hidden;
-                    &:checked + label::before {
-                        content: '남';
-                        display: inline-block;
-                        background: #0fa958;
-                        color: #fff;
-                        text-align: center;
-                    }
-                }
-                label {
-                    margin-left: 20px;
-                    width: 60px;
-                    height: 60px;
-                    border: 1px solid #999;
-                    &::before {
-                        content: '남';
-                        display: inline-block;
-                        width: 50px;
-                        height: 50px;
-                        cursor: pointer;
-                        color: #fff;
-                        background-color: #999;
-                        margin: auto;
-                    }
-                } */
             }
         }
     }
@@ -418,6 +396,7 @@ export const JoinUs = styled.div`
         text-align: center;
     }
     img {
+        display: block;
         margin: 100px auto;
     }
     button {

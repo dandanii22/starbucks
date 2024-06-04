@@ -1,29 +1,113 @@
+import { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { join } from '../../store/modules/authSlice';
 
 const JoinMemberInfo = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const [user, setUser] = useState({
+        id: '',
+        password: '',
+        passcheck: '',
+        name: '',
+        tel: '',
+        email: '',
+    });
+    const { id, name, tel, email, password, passcheck } = user;
+    const changeInput = (e) => {
+        const { name, value } = e.target;
+        setUser({
+            ...user,
+            [name]: value,
+        });
+    };
+
+    //성별 체크
+    const [male, setMale] = useState(true);
+    const [female, setFemale] = useState(false);
+    const genderClick = (e) => {
+        setMale(!male);
+        setFemale(!female);
+    };
+    //
+    const [userName, setUserName] = useState('');
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        if (!name) {
+            alert('이름을 입려해주세요');
+        } else if (!tel) {
+            setUser({ ...user });
+            alert('휴대폰 번호를 입려해주세요');
+        } else if (!email) {
+            setUser({ ...user });
+            alert('이메일 주소를 입려해주세요');
+        } else {
+            navigate('/joinclear');
+        }
+
+        setUserName(name);
+        dispatch(join(user));
+
+        setUser({
+            id: '',
+            name: '',
+            tel: '',
+            email: '',
+            password: '',
+            passcheck: '',
+        });
+    };
+
     return (
         <>
             <p className="formTitle">회원 정보를 입력해주세요</p>
-            <form className="memberInfo">
-                <input type="text" placeholder="아이디" />
-                <input type="text" placeholder="비밀번호" />
-                <input type="text" placeholder="비밀번호 확인" />
+            <form className="memberInfo" onSubmit={onSubmit}>
+                <input
+                    type="text"
+                    placeholder="아이디"
+                    name="id"
+                    value={id}
+                    onChange={changeInput}
+                />
+                <input
+                    type="password"
+                    placeholder="비밀번호"
+                    name="password"
+                    value={password}
+                    onChange={changeInput}
+                />
+                <input
+                    type="password"
+                    placeholder="비밀번호 확인"
+                    name="passcheck"
+                    value={passcheck}
+                    onChange={changeInput}
+                />
                 <div className="name">
                     <h5>
                         이름<span>(필수)</span>
                     </h5>
                     <div className="gender">
-                        <input className="word" type="text" />
+                        <input
+                            className="word"
+                            name="name"
+                            value={name}
+                            onChange={changeInput}
+                            type="text"
+                        />
                         <p>
-                            <button className="on">남</button>
-                            <button>여</button>
+                            <button onClick={genderClick} className={male ? 'on' : ''}>
+                                남
+                            </button>
+                            <button onClick={genderClick} className={female ? 'on' : ''}>
+                                여
+                            </button>
                         </p>
-
-                        {/* <input type="radio" name="gender" id="gender" />
-                        <label htmlFor="gender1" className="male"></label>
-
-                        <input type="radio" name="gender" id="gender" />
-                        <label htmlFor="gender" className="fe male"></label> */}
                     </div>
                 </div>
                 <div className="birth">
@@ -100,7 +184,7 @@ const JoinMemberInfo = () => {
                     <h5>
                         휴대폰<span>(필수)</span>
                     </h5>
-                    <input type="text" />
+                    <input type="text" name="tel" value={tel} onChange={changeInput} />
                     <input type="checkbox" name="agree1" id="agree1" />
                     <label htmlFor="agree1" className="chk sub">
                         <FaCheck
@@ -118,7 +202,7 @@ const JoinMemberInfo = () => {
                     <h5>
                         이메일<span>(필수)</span>
                     </h5>
-                    <input type="text" />
+                    <input type="text" name="email" value={email} onChange={changeInput} />
                     <input type="checkbox" name="agree2" id="agree2" />
                     <label htmlFor="agree2" className="chk sub">
                         <FaCheck
@@ -133,7 +217,9 @@ const JoinMemberInfo = () => {
                     </label>
                 </div>
                 <p>
-                    <button className="join">가입하기</button>
+                    <button className="join" type="submit">
+                        가입하기
+                    </button>
                 </p>
             </form>
         </>

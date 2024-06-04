@@ -1,7 +1,26 @@
+import { useState } from 'react';
 import JoinMemberInfo from './JoinMemberInfo';
 import { JoinWrap, LoginBefore } from './LoginStyle';
 import { FaCheck } from 'react-icons/fa';
+
 const Join = () => {
+    const [check, setCheck] = useState(false);
+    const [allCheck, setAllCheck] = useState(false);
+
+    const changeCheck = (e) => {
+        const { checked, name } = e.target;
+        if (name === 'keepAll') {
+            setCheck({
+                ...check,
+                checked: !check,
+            });
+            setAllCheck(e.target.checked ? true : false);
+        } else {
+            setCheck(e.target.name === name ? e.target.check : { ...check, checked: check });
+            // setAllCheck(e.target.checked ? true : false);
+            setAllCheck([...check, e.target.checked] ? true : false);
+        }
+    };
     return (
         <JoinWrap>
             <h3>회원가입</h3>
@@ -9,7 +28,13 @@ const Join = () => {
             <p className="formTitle">회원가입 약관동의 및 본인인증단계입니다.</p>
             <form className="agreement">
                 <div className="allAgree">
-                    <input type="checkbox" name="keepAll" id="keepAll" />
+                    <input
+                        type="checkbox"
+                        name="keepAll"
+                        id="keepAll"
+                        checked={allCheck ? check : false}
+                        onChange={changeCheck}
+                    />
                     <label htmlFor="keepAll" className="chk">
                         <FaCheck
                             style={{
@@ -25,7 +50,14 @@ const Join = () => {
                 </div>
                 <div className="agree">
                     <div className="chk">
-                        <input type="checkbox" name="keep1" id="keep1" />
+                        <input
+                            type="checkbox"
+                            name="keep1"
+                            id="keep1"
+                            checked={allCheck ? check : false}
+                            // checked={check}
+                            onChange={changeCheck}
+                        />
                         <label htmlFor="keep1" className="chk">
                             <FaCheck
                                 style={{
@@ -70,7 +102,13 @@ const Join = () => {
 
                 <div className="agree">
                     <div className="chk">
-                        <input type="checkbox" name="keep2" id="keep2" />
+                        <input
+                            type="checkbox"
+                            name="keep2"
+                            id="keep2"
+                            checked={allCheck ? check : false}
+                            onChange={changeCheck}
+                        />
                         <label htmlFor="keep2" className="chk">
                             <FaCheck
                                 style={{
@@ -100,7 +138,13 @@ const Join = () => {
                 </div>
                 <div className="agree">
                     <div className="chk">
-                        <input type="checkbox" name="keep3" id="keep3" />
+                        <input
+                            type="checkbox"
+                            name="keep3"
+                            id="keep3"
+                            checked={allCheck ? check : false}
+                            onChange={changeCheck}
+                        />
                         <label htmlFor="keep3" className="chk">
                             <FaCheck
                                 style={{
@@ -144,7 +188,8 @@ const Join = () => {
                     </div>
                 </div>
             </form>
-            <JoinMemberInfo />
+
+            {allCheck && <JoinMemberInfo />}
         </JoinWrap>
     );
 };
