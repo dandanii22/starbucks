@@ -4,8 +4,10 @@ import SubVisual from "./SubVisual";
 const LayoutSub = () => {
   return (
     <div className="wrap">
+      <Header />
       <SubVisual />
       <Outlet />
+      <Footer />
     </div>
   );
 };

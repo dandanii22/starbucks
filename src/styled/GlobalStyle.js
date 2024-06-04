@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import reset from 'styled-reset'
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -17,5 +17,6 @@ const GlobalStyle = createGlobalStyle`
   }
   li { list-style:none }
   img { vertical-align: top; }
-`
+  .inner { width:1520px; margin:auto; box-sizing:border-box; position:relative }
+`;
 export default GlobalStyle;
