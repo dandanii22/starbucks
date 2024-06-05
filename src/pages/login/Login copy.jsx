@@ -3,23 +3,22 @@ import { LoginWrap } from './LoginStyle';
 import { FaCheck } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { keepID, login, signUpDate, keepChk, removeKeep } from '../../store/modules/authSlice';
+import { keepID, login, signUpDate } from '../../store/modules/authSlice';
 
 const Login = () => {
-    const { authed, keepData, isChk } = useSelector((state) => state.authR);
-
+    const { authed, keepData } = useSelector((state) => state.authR);
     const [user, setUser] = useState({
-        email: isChk ? keepData : '',
+        email: '',
         password: '',
     });
-    const { email, password } = user;
-    const [keep, setKeep] = useState(isChk);
-
+    const [keep, setKeep] = useState(false);
     const changeKeep = (e) => {
-        const { checked } = e.target;
-        setKeep(checked);
+        setKeep(!keep);
+        console.log(keep);
+        
     };
 
+    const { email, password } = user;
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -35,32 +34,36 @@ const Login = () => {
         e.preventDefault();
         if (!email || !password) return;
         dispatch(login(user));
+
         {
-            keep ? dispatch(keepID(user)) : dispatch(removeKeep(user));
+            keep ? dispatch(keepID(user)) : dispatch(login(user));
+            console.log(keepData);
         }
+
         {
             authed ? navigate('/') : navigate('/login');
         }
-        dispatch(keepChk(keep));
     };
 
     return (
         <LoginWrap>
-            {/* {loginChk} */}
             <h3>로그인</h3>
             <img src="./images/login/bgLogo.png" alt="스타벅스 로고" />
             <form onSubmit={onSubmit} className="loginForm">
                 <p className="greeting">
                     <span>Welcome!</span> 스타벅스 코리아에 오신 것을 환영합니다.
                 </p>
-
-                <input
-                    type="text"
-                    placeholder="이메일을 입력해주세요"
-                    name="email"
-                    value={email}
-                    onChange={chageInput}
-                />
+                {keep ? (
+                    <input type="text" name="email" value={keepData} onChange={chageInput} />
+                ) : (
+                    <input
+                        type="text"
+                        placeholder="이메일을 입력해주세요"
+                        name="email"
+                        value={email}
+                        onChange={chageInput}
+                    />
+                )}
 
                 <input
                     type="password"
@@ -77,7 +80,6 @@ const Login = () => {
                         checked={keep}
                         onChange={changeKeep}
                     />
-
                     <label htmlFor="keep">
                         <FaCheck
                             style={{

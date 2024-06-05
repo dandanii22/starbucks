@@ -10,13 +10,13 @@ const JoinMemberInfo = () => {
 
     const [user, setUser] = useState({
         id: '',
-        password: '',
-        passcheck: '',
-        name: '',
-        tel: '',
         email: '',
+        nickName: '',
+        password: '',
+        passwordchk: '',
+        tel: '',
     });
-    const { id, name, tel, email, password, passcheck } = user;
+    const { id, email, password, passchk, nickName, tel } = user;
     const changeInput = (e) => {
         const { name, value } = e.target;
         setUser({
@@ -26,40 +26,38 @@ const JoinMemberInfo = () => {
     };
 
     //성별 체크
-    const [male, setMale] = useState(true);
+    /*   const [male, setMale] = useState(true);
     const [female, setFemale] = useState(false);
     const genderClick = (e) => {
         setMale(!male);
         setFemale(!female);
-    };
+    }; */
     //
     const [userName, setUserName] = useState('');
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        if (!name) {
-            alert('이름을 입려해주세요');
+        if (!nickName) {
+            alert('이름을 입력해주세요');
         } else if (!tel) {
-            setUser({ ...user });
-            alert('휴대폰 번호를 입려해주세요');
+            alert('휴대폰 번호를 입력해주세요');
         } else if (!email) {
-            setUser({ ...user });
-            alert('이메일 주소를 입려해주세요');
+            alert('이메일 주소를 입력해주세요');
         } else {
             navigate('/joinclear');
         }
 
-        setUserName(name);
+        setUserName(nickName);
         dispatch(join(user));
 
         setUser({
             id: '',
-            name: '',
-            tel: '',
             email: '',
+            nickName: '',
             password: '',
-            passcheck: '',
+            passwordchk: '',
+            tel: '',
         });
     };
 
@@ -69,9 +67,9 @@ const JoinMemberInfo = () => {
             <form className="memberInfo" onSubmit={onSubmit}>
                 <input
                     type="text"
-                    placeholder="아이디"
-                    name="id"
-                    value={id}
+                    placeholder="이메일 또는 아이디"
+                    name="email"
+                    value={email}
                     onChange={changeInput}
                 />
                 <input
@@ -84,8 +82,8 @@ const JoinMemberInfo = () => {
                 <input
                     type="password"
                     placeholder="비밀번호 확인"
-                    name="passcheck"
-                    value={passcheck}
+                    name="passchk"
+                    value={passchk}
                     onChange={changeInput}
                 />
                 <div className="name">
@@ -95,19 +93,15 @@ const JoinMemberInfo = () => {
                     <div className="gender">
                         <input
                             className="word"
-                            name="name"
-                            value={name}
+                            name="nickName"
+                            value={nickName}
                             onChange={changeInput}
                             type="text"
                         />
-                        <p>
-                            <button onClick={genderClick} className={male ? 'on' : ''}>
-                                남
-                            </button>
-                            <button onClick={genderClick} className={female ? 'on' : ''}>
-                                여
-                            </button>
-                        </p>
+                        <input type="radio" id="choose" name="choose" />
+                        <label htmlFor="choose">남</label>
+                        <input type="radio" id="choose1" name="choose" />
+                        <label htmlFor="choose1">여</label>
                     </div>
                 </div>
                 <div className="birth">
@@ -217,7 +211,7 @@ const JoinMemberInfo = () => {
                     </label>
                 </div>
                 <p>
-                    <button className="join" type="submit">
+                    <button className="join" onClick={() => dispatch(join(user))}>
                         가입하기
                     </button>
                 </p>
