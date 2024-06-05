@@ -3,9 +3,14 @@ import GlobalStyle from "./styled/GlobalStyle";
 import Layout from "./components/Layout";
 import FoodForm from "./pages/menu/food/FoodForm";
 import FoodDetail from "./pages/menu/food/FoodDetail";
-
 import ProductForm from "./pages/menu/product/ProductForm";
 import ProductDetail from "./pages/menu/product/ProductDetail";
+
+import Main from './pages/main/Main';
+import Login from './pages/login/Login';
+import Logout from './pages/login/Logout';
+import Join from './pages/login/Join';
+import JoinClear from './pages/login/JoinClear';
 function App() {
   return (
     <>
