@@ -28,7 +28,7 @@ const NavBar = () => {
             onMouseLeave={handleMouseLeave1}
             className={coffeeOpen ? "on" : ""}
           >
-            <Link to="coffee" className="active ">
+            <Link to="/drinkMenu" className="active ">
               COFFEE
             </Link>
           </li>
@@ -40,17 +40,17 @@ const NavBar = () => {
             >
               <ul>
                 <li className="coffee">
-                  <Link to="/menu/coffee">음료</Link>
-                  <Link to="/menu/coffee">콜드브루</Link>
-                  <Link to="/menu/coffee">브루드커피</Link>
-                  <Link to="/menu/coffee">에스프레소</Link>
-                  <Link to="/menu/coffee">프라푸치노</Link>
-                  <Link to="/menu/coffee">블렌디드</Link>
-                  <Link to="/menu/coffee">스타벅스 리프레셔</Link>
-                  <Link to="/menu/coffee">스타벅스 피지오</Link>
-                  <Link to="/menu/coffee">티(티바나)</Link>
-                  <Link to="/menu/coffee">기타 제조 음료</Link>
-                  <Link to="/menu/coffee">스바벅스 주스(병음료)</Link>
+                  <Link to="/drinkMenu">음료</Link>
+                  <Link to="/drinkMenu">콜드브루</Link>
+                  <Link to="/drinkMenu">브루드커피</Link>
+                  <Link to="/drinkMenu">에스프레소</Link>
+                  <Link to="/drinkMenu">프라푸치노</Link>
+                  <Link to="/drinkMenu">블렌디드</Link>
+                  <Link to="/drinkMenu">스타벅스 리프레셔</Link>
+                  <Link to="/drinkMenu">스타벅스 피지오</Link>
+                  <Link to="/drinkMenu">티(티바나)</Link>
+                  <Link to="/drinkMenu">기타 제조 음료</Link>
+                  <Link to="/drinkMenu">스바벅스 주스(병음료)</Link>
                 </li>
               </ul>
             </div>
