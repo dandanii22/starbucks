@@ -13,6 +13,13 @@ function App() {
         <GlobalStyle />
         <Routes>
           <Route path="/" element={<Layout />}>
+               <Route index element={<Main />} />
+                        <Route path="/join" element={<Join />} />
+                        <Route path="/joinclear" element={<JoinClear />} />
+                       
+
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/logout" element={<Logout />} />
             <Route>
               <Route path="/food" element={<FoodForm />} />
               <Route path="/food/:category/:foodID" element={<FoodDetail />} />
