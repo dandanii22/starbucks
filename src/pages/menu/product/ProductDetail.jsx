@@ -2,8 +2,9 @@ import { Detail } from "./ProductStyle";
 import logoimg from "../../../../public/images/logo2.png";
 import { useNavigate, useParams } from "react-router-dom";
 import data from "../../../assets/api/productData";
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import Myproduct from "./Myproduct";
+import { Link } from "react-router-dom";
 
 const ProductDetail = () => {
   const { productID, category } = useParams();
@@ -27,7 +28,8 @@ const ProductDetail = () => {
   );
 
   // imgurl만 추출
-  const imgData = data[0].data.map((data1) => data1.imgurl);
+  const imgData = productData[0].data.map((data1) => data1.imgurl);
+  console.log("imgData", imgData);
 
   //랜덤추출
   const newarr = [];
@@ -54,18 +56,21 @@ const ProductDetail = () => {
           <p className="desc">{thisProduct.text}</p>
           <p className="btn">
             <button onClick={() => setContet(!content)}>
-              나만의 푸드로 등록<i className="xi-heart-o"></i>
+              나만의 상품으로 등록
+              {content ? (
+                <i className="xi-heart" />
+              ) : (
+                <i className="xi-heart-o" />
+              )}
             </button>
             <button>장바구니 담기</button>
           </p>
         </div>
       </div>
-
-      {content && <Myprodcut setContet={setContet} content={content} />}
-
+      {content && <Myproduct setContet={setContet} content={content} />}
       <div className="recommend">
         <div className="title">
-          <img src={logoimg} alt="로고이미지" />
+          <img src={logoimg} alt="" />
           <h3>오늘의 추천 상품</h3>
         </div>
         <ul>

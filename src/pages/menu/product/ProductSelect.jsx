@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SelectBox } from "./ProductStyle";
 import DropDown from "./DropDown";
 
-const ProductSelect = () => {
+const ProductSelect = ({ showNew, setShowNew }) => {
   const [showOptions, SetShowOptions] = useState(false);
 
   return (
@@ -14,7 +14,9 @@ const ProductSelect = () => {
         </button>
       </div>
 
-      <ul>{showOptions && <DropDown />}</ul>
+      <ul>
+        {showOptions && <DropDown showNew={showNew} setShowNew={setShowNew} />}
+      </ul>
     </SelectBox>
   );
 };

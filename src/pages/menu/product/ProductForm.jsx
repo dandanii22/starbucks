@@ -1,6 +1,7 @@
 import SubVisual from "../../../components/ProductSubVisual";
 import Mug from "./Mug";
 import Glass from "./Glass";
+import data from "../../../assets/api/productData";
 import { ProductWrap } from "./ProductStyle";
 import { useState } from "react";
 import Plastic from "./Plastic";
@@ -11,15 +12,14 @@ import Setproduct from "./Setproduct";
 import ProductInput from "./ProductInput";
 import ProductSelect from "./ProductSelect";
 import Tea from "./Tea";
-import data from "../../../assets/api/productData";
 import CategoryProduct from "./CategoryProduct";
 const ProductForm = () => {
   const [isCheckCategory, setIsCheckCategory] = useState({
     all: true,
-    accessory: false,
-    falsk: false,
-    glass: false,
     mug: false,
+    accessory: false,
+    flask: false,
+    glass: false,
     plastic: false,
     setproduct: false,
     stainless: false,
@@ -27,7 +27,7 @@ const ProductForm = () => {
   });
   const [showNew, setShowNew] = useState({
     new: false,
-    season: false,
+    limited: false,
   });
 
   //data 추출
@@ -49,7 +49,7 @@ const ProductForm = () => {
         />
         <div className="productmenu">
           <div className="select">
-            <ProductSelect />
+            <ProductSelect showNew={showNew} setShowNew={setShowNew} />
           </div>
 
           <div className="product">
@@ -62,10 +62,10 @@ const ProductForm = () => {
                 {isCheckCategory.mug && <Mug showNew={showNew} />}
                 {isCheckCategory.glass && <Glass showNew={showNew} />}
                 {isCheckCategory.plastic && <Plastic showNew={showNew} />}
-                {isCheckCategory.glass && <Stainless showNew={showNew} />}
-                {isCheckCategory.plastic && <Flask showNew={showNew} />}
-                {isCheckCategory.setproduct && <Accessory showNew={showNew} />}
-                {isCheckCategory.stainless && <Setproduct showNew={showNew} />}
+                {isCheckCategory.stainless && <Stainless showNew={showNew} />}
+                {isCheckCategory.flask && <Flask showNew={showNew} />}
+                {isCheckCategory.accessory && <Accessory showNew={showNew} />}
+                {isCheckCategory.setproduct && <Setproduct showNew={showNew} />}
                 {isCheckCategory.tea && <Tea showNew={showNew} />}
               </>
             )}

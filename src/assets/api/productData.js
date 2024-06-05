@@ -85,7 +85,6 @@ const productData = [
         id: 8,
         imgurl: "../../images/product/Mug8.jpg",
         title: "야나칸 머메이트 핀칭컵 240ml",
-
         kor: "야나칸 머메이트 핀칭컵 240ml",
         eng: "Yarnnakarn mermaid pinching cup 240ml",
         text: "머메이드 컬렉션의 메인 아이템으로, 야나칸 디자이너가 스타벅스 코리아만을 위해 특별히 디자인한 신규 모델",

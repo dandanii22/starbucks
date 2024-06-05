@@ -8,16 +8,19 @@ const Mug = ({ showNew }) => {
       <div className="inner">
         <h2>머그</h2>
         <ul>
-          {showNew.new === true
+          {showNew.new === true || showNew.limited === true
             ? data.map((item) => {
                 if (item?.category === "mug") {
                   return item?.data?.map((item2) => {
-                    if (item2.icon === "new") {
+                    if (
+                      (showNew.new && item2.icon === "new") ||
+                      (showNew.limited && item2.icon === "limit")
+                    ) {
                       return (
                         <Link to={`${item.category}/${item2.id}`}>
                           <li key={item2.id}>
                             <img src={item2.imgurl}></img>
-                            <p>{item2.Kortitle}</p>
+                            <p>{item2.title}</p>
                           </li>
                         </Link>
                       );
@@ -32,7 +35,7 @@ const Mug = ({ showNew }) => {
                       <Link to={`${item.category}/${item2.id}`}>
                         <li key={item2.id}>
                           <img src={item2.imgurl}></img>
-                          <p>{item2.Kortitle}</p>
+                          <p>{item2.title}</p>
                         </li>
                       </Link>
                     );

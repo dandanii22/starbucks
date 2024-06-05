@@ -15,21 +15,26 @@ export const SubVisualWrap = styled.div`
     font-size: 40px;
     font-weight: 700;
     color: #fff;
+    text-shadow: 3px 3px 3px gray;
   }
 `;
 
 export const ProductWrap = styled.div`
-  .productmenu {
-    position: relative;
-    display: flex;
-  }
-  .select {
-    position: absolute;
-    right: 0;
-    top: 0.5%;
-    z-index: 1000;
-  }
-  .product {
+  .inner {
+    padding-bottom: 130px;
+    .productmenu {
+      position: relative;
+      display: flex;
+    }
+    .select {
+      position: absolute;
+      right: 0;
+      top: 40px;
+      z-index: 1000;
+    }
+
+    .product {
+    }
   }
 `;
 export const ProductForm = styled.div`
@@ -198,7 +203,7 @@ export const Detail = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 
     .mainimg {
       width: 600px;
@@ -292,7 +297,6 @@ export const Detail = styled.div`
     }
   }
 `;
-
 export const ProductChoice = styled.form`
   margin: auto;
   margin-bottom: 100px;

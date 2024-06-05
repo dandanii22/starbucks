@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ProductForm } from "./ProductStyle";
-import data from "../../../assets/api/productData";
 
 const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
   const [showInput, setShowInput] = useState(true);
@@ -31,13 +30,14 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                   checked={isCheckCategory.all}
                   onChange={(e) => {
                     setIsCheckCategory({
-                      bread: false,
-                      cake: false,
-                      sandwich: false,
-                      soup: false,
-                      fruit: false,
-                      snack: false,
-                      icecream: false,
+                      mug: false,
+                      accessory: false,
+                      flask: false,
+                      glass: false,
+                      plastic: false,
+                      setproduct: false,
+                      stainless: false,
+                      tea: false,
                       [e.target.name]: e.target.checked,
                     });
                   }}
@@ -49,7 +49,6 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                   type="checkbox"
                   name="mug"
                   id="chk"
-                  value="mug"
                   checked={isCheckCategory.mug}
                   onChange={(e) => {
                     setIsCheckCategory({
@@ -66,7 +65,6 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                   type="checkbox"
                   id="chk"
                   name="glass"
-                  value="glass"
                   checked={isCheckCategory.glass}
                   onChange={(e) =>
                     setIsCheckCategory({
@@ -83,7 +81,6 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                   type="checkbox"
                   id="chk"
                   name="plastic"
-                  value="plastic"
                   checked={isCheckCategory.plastic}
                   onChange={(e) =>
                     setIsCheckCategory({
@@ -100,7 +97,6 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                   type="checkbox"
                   id="chk"
                   name="stainless"
-                  value="stainless"
                   checked={isCheckCategory.stainless}
                   onChange={(e) =>
                     setIsCheckCategory({
@@ -117,7 +113,6 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                   type="checkbox"
                   id="chk"
                   name="flask"
-                  value="flask"
                   checked={isCheckCategory.flask}
                   onChange={(e) =>
                     setIsCheckCategory({
@@ -134,7 +129,6 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                   type="checkbox"
                   id="chk"
                   name="accessory"
-                  value="accessory"
                   checked={isCheckCategory.accessory}
                   onChange={(e) =>
                     setIsCheckCategory({
@@ -151,7 +145,6 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                   type="checkbox"
                   id="chk"
                   name="setproduct"
-                  value="setproduct"
                   checked={isCheckCategory.setproduct}
                   onChange={(e) =>
                     setIsCheckCategory({
@@ -168,7 +161,6 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                   type="checkbox"
                   id="chk"
                   name="tea"
-                  value="tea"
                   checked={isCheckCategory.tea}
                   onChange={(e) =>
                     setIsCheckCategory({

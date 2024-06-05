@@ -15,21 +15,25 @@ export const SubVisualWrap = styled.div`
     font-size: 40px;
     font-weight: 700;
     color: #fff;
+    text-shadow: 2px 2px 2px gray;
   }
 `;
 
 export const FoodWrap = styled.div`
-  .foodmenu {
-    position: relative;
-    display: flex;
-  }
-  .select {
-    position: absolute;
-    right: 0;
-    top: 40px;
-    z-index: 1000;
-  }
-  .food {
+  .inner {
+    padding-bottom: 130px;
+    .foodmenu {
+      position: relative;
+      display: flex;
+    }
+    .select {
+      position: absolute;
+      right: 0;
+      top: 40px;
+      z-index: 1000;
+    }
+    .food {
+    }
   }
 `;
 export const FoodForm = styled.div`
@@ -162,6 +166,7 @@ export const SelectBox = styled.div`
 
 export const FoodMenu = styled.div`
   padding-top: 8%;
+
   h2 {
     font-size: 16px;
     font-weight: 700;
@@ -178,6 +183,7 @@ export const FoodMenu = styled.div`
     flex-wrap: wrap;
     width: 1520px;
     align-content: center;
+
     li {
       text-align: center;
       margin-right: 20px;

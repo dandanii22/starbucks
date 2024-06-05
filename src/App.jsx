@@ -6,11 +6,13 @@ import FoodDetail from "./pages/menu/food/FoodDetail";
 import ProductForm from "./pages/menu/product/ProductForm";
 import ProductDetail from "./pages/menu/product/ProductDetail";
 
-import Main from './pages/main/Main';
-import Login from './pages/login/Login';
-import Logout from './pages/login/Logout';
-import Join from './pages/login/Join';
-import JoinClear from './pages/login/JoinClear';
+import Main from "./pages/main/Main";
+import Login from "./pages/login/Login";
+import Logout from "./pages/login/Logout";
+import Join from "./pages/login/Join";
+import JoinClear from "./pages/login/JoinClear";
+import DrinkMenu from "./pages/drinkMenu/DrinkMenu";
+import DrinkMenuDetail from "./components/DrinkMenu/DrinkMenuDetail";
 function App() {
   return (
     <>
@@ -18,13 +20,12 @@ function App() {
         <GlobalStyle />
         <Routes>
           <Route path="/" element={<Layout />}>
-               <Route index element={<Main />} />
-                        <Route path="/join" element={<Join />} />
-                        <Route path="/joinclear" element={<JoinClear />} />
-                       
+            <Route index element={<Main />} />
+            <Route path="/join" element={<Join />} />
+            <Route path="/joinclear" element={<JoinClear />} />
 
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/logout" element={<Logout />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
             <Route path="/drinkMenu">
               <Route index element={<DrinkMenu />} />
               <Route path=":category/:drinkID" element={<DrinkMenuDetail />} />

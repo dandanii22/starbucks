@@ -16,14 +16,6 @@ const Myfood = ({ setContet, content }) => {
   return (
     <FoodChoice>
       <div className="left">
-        {/* {imgData.map(
-          (data2, idx) =>
-            idx < 1 && (
-              <li>
-                <img src={data2} />
-              </li>
-            )
-        )} */}
         <img src={thisFood.imgurl}></img>
         <div className="myselect">
           <h3>추가옵션</h3>
