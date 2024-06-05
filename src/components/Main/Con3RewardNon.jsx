@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom';
+
 const Con3RewardNon = () => {
+    const navigate = useNavigate();
     return (
         <div className="Member non">
             <div className="reward-icon">
@@ -15,8 +18,10 @@ const Con3RewardNon = () => {
                     <span>스타벅스 회원이 아니세요? </span> 가입을 통해 리워드 혜택을 즐기세요.
                 </p>
                 <p className="btn">
-                    <button className="on">회원가입</button>
-                    <button>로그인</button>
+                    <button className="on" onClick={() => navigate('/join')}>
+                        회원가입
+                    </button>
+                    <button onClick={() => navigate('/login')}>로그인</button>
                 </p>
             </div>
         </div>
