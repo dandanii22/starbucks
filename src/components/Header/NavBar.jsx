@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { NavWarp, TopMenu } from './HeaderStyle';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const NavBar = () => {
     const [coffeeOpen, setCoffeeOpen] = useState(false);
@@ -15,6 +16,8 @@ const NavBar = () => {
 
     const handleMouseEnter3 = () => setProductOpen(true);
     const handleMouseLeave3 = () => setProductOpen(false);
+
+    const { authed } = useSelector((state) => state.authR);
     return (
         <>
             <NavWarp>
@@ -121,12 +124,16 @@ const NavBar = () => {
                     </li>
                 </ul>
                 <TopMenu>
-                    <li>
-                        <Link to={'/login'}>Login</Link>
-                    </li>
-                    {/* <li>
-                        <Link to={'/logout'}>Logout</Link>
-                    </li> */}
+                    {authed ? (
+                        <li>
+                            <Link to={'/logout'}>Logout</Link>
+                        </li>
+                    ) : (
+                        <li>
+                            <Link to={'/login'}>Login</Link>
+                        </li>
+                    )}
+
                     <li>
                         <Link to={'/join'}>Join us</Link>
                     </li>
