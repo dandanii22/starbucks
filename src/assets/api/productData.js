@@ -3,7 +3,7 @@ const productData = [
     //테마분류: season [summer, city, reserve, online, offline ]
     //상세분류: icon [new, limit, '']
     id: 1,
-    category: "머그",
+    category: "mug",
     data: [
       {
         id: 1,
@@ -118,7 +118,7 @@ const productData = [
   },
   {
     id: 2,
-    category: "글래스",
+    category: "glass",
     data: [
       {
         id: 1,
@@ -190,7 +190,7 @@ const productData = [
   },
   {
     id: 3,
-    category: "플라스틱 텀블러",
+    category: "plastic",
     data: [
       {
         id: 1,
@@ -284,7 +284,7 @@ const productData = [
   },
   {
     id: 4,
-    category: "스테인리스 텀블러",
+    category: "stainless",
     data: [
       {
         id: 1,
@@ -447,7 +447,7 @@ const productData = [
   },
   {
     id: 5,
-    category: "보온병",
+    category: "flask",
     data: [
       {
         id: 1,
@@ -487,7 +487,7 @@ const productData = [
 
   {
     id: 6,
-    category: "악세사리",
+    category: "accessory",
     data: [
       {
         id: 1,
@@ -603,7 +603,7 @@ const productData = [
   },
   {
     id: 7,
-    category: "선물세트",
+    category: "setproduct",
     data: [
       {
         id: 1,
@@ -664,7 +664,7 @@ const productData = [
   },
   {
     id: 8,
-    category: "패키지 티",
+    category: "tea",
     data: [
       {
         id: 1,

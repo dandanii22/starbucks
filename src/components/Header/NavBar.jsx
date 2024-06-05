@@ -23,8 +23,6 @@ const NavBar = () => {
     <>
       <NavWarp>
         <ul className="gnb">
-            <div></div>
-            <div></div>
           <li
             onMouseEnter={handleMouseEnter1}
             onMouseLeave={handleMouseLeave1}

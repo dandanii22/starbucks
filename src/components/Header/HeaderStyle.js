@@ -5,8 +5,10 @@ export const HeaderWarp = styled.div`
     border-bottom: 1px solid #dcdcdc;
     border-top: 2px solid #000;
     background-color: #f6f5ef;
-    /* position: fixed;
-    z-index: 1000; */
+
+    display: block;
+    position: fixed;
+    z-index: 1000;
 
     .inner {
         margin: 0 auto;
@@ -16,7 +18,6 @@ export const HeaderWarp = styled.div`
         display: flex;
         justify-content: end;
         align-items: center;
-        z-index: 1000;
     }
     h1 {
         img {
@@ -81,6 +82,16 @@ export const NavWarp = styled.nav`
         top: 110px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         width: 100%;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            background: #333;
+            display: block;
+            width: 1920px;
+            height: 400px;
+            left: -200px;
+        }
 
         ul {
             list-style: none;

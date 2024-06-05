@@ -318,6 +318,25 @@ export const JoinWrap = styled.div`
             margin: 20px auto;
             text-indent: 20px;
         }
+        input[type='radio'] {
+            display: none;
+            & + label {
+                display: inline-block;
+                cursor: pointer;
+                width: 60px;
+                height: 60px;
+                border: 1px solid #999;
+                line-height: 60px;
+                text-align: center;
+                background-color: #fff;
+                color: #333;
+                margin-left: 15px;
+            }
+            &:checked + label {
+                background-color: #999;
+                color: #fff;
+            }
+        }
         h5 {
             margin-top: 30px;
             font-size: 20px;

@@ -48,19 +48,21 @@ export const Maincon1Wrap = styled.div`
     p {
         margin: 0 auto;
         text-align: center;
-        display: inline-block;
+        display: flex;
         line-height: 100px;
+        height: 100px;
         width: 1520px;
         color: #fff;
         font-size: 20px;
         font-weight: bold;
 
         span {
-            margin: 0 50px;
             font-weight: lighter;
         }
         i {
-            margin-left: 300px;
+            font-size: 40px;
+            line-height: 100px;
+            margin-left: 600px;
         }
     }
 `;

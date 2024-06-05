@@ -19,7 +19,7 @@ export const SubVisualWrap = styled.div`
 `;
 
 export const ProductWrap = styled.div`
-  .foodmenu {
+  .productmenu {
     position: relative;
     display: flex;
   }
@@ -29,7 +29,7 @@ export const ProductWrap = styled.div`
     top: 0.5%;
     z-index: 1000;
   }
-  .food {
+  .product {
   }
 `;
 export const ProductForm = styled.div`
@@ -289,6 +289,63 @@ export const Detail = styled.div`
       background: none;
       border-radius: 5px;
       border: 1px solid #9e9e9e;
+    }
+  }
+`;
+
+export const ProductChoice = styled.form`
+  margin: auto;
+  margin-bottom: 100px;
+  position: relative;
+  .left {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 173px;
+
+    .myselect {
+      background: #f4f4f2;
+      width: 1250px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      line-height: 90px;
+
+      h3 {
+        padding-left: 50px;
+        font-weight: 700;
+        margin-right: 30px;
+      }
+      select {
+        width: 175px;
+        height: 40px;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        option {
+        }
+      }
+    }
+  }
+
+  .btnwrap {
+    position: absolute;
+    right: 180px;
+    top: 220px;
+
+    button {
+      width: 77px;
+      height: 40px;
+      border-radius: 3px;
+      color: #fff;
+      border: none;
+      font-weight: 700;
+      &:first-child {
+        background: #006633;
+        margin-right: 10px;
+      }
+      &:last-child {
+        background: #000;
+      }
     }
   }
 `;

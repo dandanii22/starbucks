@@ -1,5 +1,4 @@
 import { Detail } from "./FoodStyle";
-import img from "../../../../public/images/food/bread/bread01.jpg";
 import logoimg from "../../../../public/images/logo2.png";
 
 import { useNavigate, useParams } from "react-router-dom";
