@@ -6,8 +6,7 @@ import { useSelector } from "react-redux";
 const NavBar = () => {
   const [coffeeOpen, setCoffeeOpen] = useState(false);
   const [foodOpen, setFoodOpen] = useState(false);
- 지금 그러면 리덕스 저걸 포함 시켜서 합쳐야 하는거야?
- 아니 nav 수정한것만 
+
   const [productOpen, setProductOpen] = useState(false);
 
   const handleMouseEnter1 = () => setCoffeeOpen(true);
@@ -24,6 +23,8 @@ const NavBar = () => {
     <>
       <NavWarp>
         <ul className="gnb">
+            <div></div>
+            <div></div>
           <li
             onMouseEnter={handleMouseEnter1}
             onMouseLeave={handleMouseLeave1}
