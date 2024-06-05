@@ -16,7 +16,7 @@ const JoinMemberInfo = () => {
         passwordchk: '',
         tel: '',
     });
-    const { id, email, password, passchk, nickName, tel } = user;
+    const { id, email, password, passwordchk, nickName, tel } = user;
     const changeInput = (e) => {
         const { name, value } = e.target;
         setUser({
@@ -82,8 +82,8 @@ const JoinMemberInfo = () => {
                 <input
                     type="password"
                     placeholder="비밀번호 확인"
-                    name="passchk"
-                    value={passchk}
+                    name="passwordchk"
+                    value={passwordchk}
                     onChange={changeInput}
                 />
                 <div className="name">

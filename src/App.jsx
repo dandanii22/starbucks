@@ -25,6 +25,10 @@ function App() {
 
                         <Route path="/login" element={<Login />} />
                         <Route path="/logout" element={<Logout />} />
+            <Route path="/drinkMenu">
+              <Route index element={<DrinkMenu />} />
+              <Route path=":category/:drinkID" element={<DrinkMenuDetail />} />
+            </Route>
             <Route>
               <Route path="/food" element={<FoodForm />} />
               <Route path="/food/:category/:foodID" element={<FoodDetail />} />
