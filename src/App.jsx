@@ -13,6 +13,11 @@ import Join from "./pages/login/Join";
 import JoinClear from "./pages/login/JoinClear";
 import DrinkMenu from "./pages/drinkMenu/DrinkMenu";
 import DrinkMenuDetail from "./components/DrinkMenu/DrinkMenuDetail";
+
+import Notice from './pages/notice/Notice';
+import LayoutSub from './components/LayoutSub';
+import MyStabucks from './pages/myStabucks/MyStabucks';
+import BeforeLogin from './pages/login/BeforeLogin';
 function App() {
   return (
     <>
@@ -25,7 +30,17 @@ function App() {
             <Route path="/joinclear" element={<JoinClear />} />
 
             <Route path="/login" element={<Login />} />
+            <Route path="/notice">
+                            <Route index element={<Notice />} />
+                            <Route path="/notice/:noticeID" element={<NoticeDetail />} />
+                        </Route>
             <Route path="/logout" element={<Logout />} />
+
+<Route element={<LayoutSub />}></Route>
+
+                        <Route path="/MyStabucks" element={<MyStabucks />} />
+                        <Route path="/before" element={<BeforeLogin />} />
+            
             <Route path="/drinkMenu">
               <Route index element={<DrinkMenu />} />
               <Route path=":category/:drinkID" element={<DrinkMenuDetail />} />
