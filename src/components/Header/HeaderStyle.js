@@ -149,16 +149,6 @@ export const TopMenu = styled.ul`
         a {
             font-size: 15px;
         }
-        &::after {
-            content: '';
-            height: 14px;
-            width: 1px;
-            background: #999;
-            display: inline-block;
-            margin-left: 20px;
-        }
-        &:last-child::after {
-            display: none;
-        }
+      
     }
 `;
