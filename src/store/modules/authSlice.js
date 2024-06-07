@@ -7,34 +7,87 @@ const initialState = {
               {
                   id: 1,
                   email: 'user1@naver.com',
-                  nickName: '별명',
+                  nickName: '스벅뉴비',
                   password: '123',
-                  passwordchk: '123',
-                  tel: '010-1111-1111',
                   myReward: {
-                      stars: 1,
-                      frequency: 1,
+                      stars: 0,
+                      frequency: 0,
                   },
                   myCard: [],
                   myMenus: [],
               },
-          ],
-    user: localStorage.getItem('user')
-        ? JSON.parse(localStorage.getItem('user'))
-        : {
-              id: 1,
-              email: 'user1@naver.com',
-              nickName: '별명',
-              password: '123',
-              passwordchk: '123',
-              tel: '010-1111-1111',
-              myReward: {
-                  stars: 1,
-                  frequency: 1,
+              {
+                  id: 2,
+                  email: 'user2@naver.com',
+                  nickName: '별명2',
+                  password: '123',
+                  myReward: {
+                      stars: 15,
+                      frequency: 10,
+                  },
+                  myCard: [
+                      {
+                          id: 1,
+                          cardName: '밸런타인 데이 카드',
+                          cardNicname: '나만의 카드2',
+                          recharge: 10000,
+                          imgurl: './images/cards/love/010866_WEB.png',
+                      },
+                      {
+                          id: 2,
+                          cardName: '고맙습니다 카드',
+                          cardNicname: '나만의 카드',
+                          recharge: 0,
+                          imgurl: './images/cards/thanks/011006_WEB.png',
+                      },
+                  ],
+                  myMenus: [
+                      {
+                          id: 1,
+                          drinkNo: 1,
+                          cate: 1,
+                          kor: '씨솔트 카라멜 콜드 브루',
+                          option: '퍼스널 옵션',
+                          date: '2024-06-01',
+                          isChk: false,
+                          imgurl: './images/drink/coldbrew/coldbrew01.jpg',
+                      },
+                      {
+                          id: 2,
+                          drinkNo: 2,
+                          cate: 1,
+                          kor: '나이트로 바닐라 크림',
+                          option: '퍼스널 옵션',
+                          date: '2024-06-01',
+                          isChk: false,
+                          imgurl: './images/drink/coldbrew/coldbrew02.jpg',
+                      },
+                      {
+                          id: 3,
+                          foodNo: 1,
+                          cate: 2,
+                          kor: '소시지 프레첼 소금빵',
+                          option: '퍼스널 옵션',
+                          date: '2024-06-01',
+                          isChk: false,
+                          imgurl: './images/food/bread/bread03.jpg',
+                      },
+                      {
+                          id: 4,
+                          goodsNo: 1,
+                          cate: 3,
+                          kor: 'SS 리저브 블랙 DW 머그 355ml',
+                          option: '퍼스널 옵션',
+                          date: '2024-06-01',
+                          isChk: false,
+                          imgurl: './images/product/Mug2.jpg',
+                      },
+                  ],
               },
-              myCard: [],
-              myMenus: [],
-          },
+          ],
+
+    user: localStorage.getItem('user') || {},
+
     authed: false,
     tabMenus: [],
     name: '',
@@ -43,7 +96,7 @@ const initialState = {
     isChk: localStorage.getItem('isChk') ? JSON.parse(localStorage.getItem('isChk')) : false,
 };
 
-let no = initialState.logData.length + 1;
+let no = 2;
 
 export const authSlice = createSlice({
     name: 'auth',
@@ -59,11 +112,11 @@ export const authSlice = createSlice({
                 alert('비밀번호를 잘못 입력하였습니다.');
                 state.authed = false;
             }
+            state.tabMenus = state.user.myMenus.filter((menu) => menu.cate === parseInt(1));
+            localStorage.setItem('user', JSON.stringify(state.user)); // 로그인한 사용자 정보를 로컬스토리지에 저장
         },
 
         logout: (state, action) => {
-            // state.user = null;
-            // state.authed = false;
             if (state.user) {
                 // logData에서 현재 사용자 정보를 찾아 업데이트
                 const updatedLogData = state.logData.map((item) =>
@@ -78,8 +131,18 @@ export const authSlice = createSlice({
             localStorage.removeItem('user'); // 로그인한 사용자 정보를 로컬스토리지에서 제거
         },
         join: (state, action) => {
-            state.logData = [...state.logData, { id: no++, ...action.payload }];
-            localStorage.setItem('dataList', JSON.stringify(state.logData));
+            state.logData = [
+                ...state.logData,
+                {
+                    id: no++,
+                    // myReward: {
+                    //     stars: 1,
+                    //     frequency: 1,
+                    // },
+                    ...action.payload,
+                },
+            ];
+            localStorage.setItem('logData', JSON.stringify(state.logData));
             state.name = action.payload.nickName;
         },
         signUpDate: (state, action) => {
