@@ -139,7 +139,7 @@ const NavBar = () => {
                         </li>
                     )}
 
-                    <li>{authed === false && <Link to={'/join'}>Join us</Link>}</li>
+                    <li>{authed === false && <Link to={'/join'}>| &nbsp; Join us</Link>}</li>
                 </TopMenu>
             </NavWarp>
         </>
