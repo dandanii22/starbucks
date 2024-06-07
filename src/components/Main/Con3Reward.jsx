@@ -1,8 +1,9 @@
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Con3Reward = () => {
     const { user } = useSelector((state) => state.authR);
-
+    const navigate = useNavigate();
     return (
         <div className="Member">
             <div className="reward-icon">
@@ -20,7 +21,7 @@ const Con3Reward = () => {
                 </p>
 
                 <p className="btn">
-                    <button>리워드 및 혜택</button>
+                    <button onClick={() => navigate('/MyStabucks')}>리워드 및 혜택</button>
                 </p>
             </div>
         </div>

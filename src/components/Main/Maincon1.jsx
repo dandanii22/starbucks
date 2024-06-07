@@ -3,13 +3,17 @@ import { Maincon1Wrap } from './MainConStyles';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Mousewheel, Autoplay } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 
 const Maincon1 = () => {
+    const navigate = useNavigate();
+
     return (
         <Maincon1Wrap>
             <p>
                 공지사항
                 <Swiper
+                    onClick={() => navigate('/notice')}
                     style={{ height: '60px' }}
                     direction={'vertical'}
                     slidesPerView={1}
@@ -38,7 +42,7 @@ const Maincon1 = () => {
                         <span>영상정보처리기기 운영방침 / 개인정보처리방침 이용약관 개정 안내</span>
                     </SwiperSlide>
                 </Swiper>
-                <i className="xi-plus-circle-o"></i>
+                <i onClick={() => navigate('/notice')} className="xi-plus-circle-o"></i>
             </p>
         </Maincon1Wrap>
     );
