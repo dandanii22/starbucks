@@ -187,11 +187,23 @@ export const ProductMenu = styled.div`
       text-align: center;
       margin-right: 20px;
       margin-bottom: 20px;
+      cursor: pointer;
 
-      img {
+      .img {
+        overflow: hidden;
         width: 280px;
         height: 280px;
         margin-bottom: 10px;
+        img {
+          width: 280px;
+          height: 280px;
+
+          transition: 1s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
       }
     }
   }

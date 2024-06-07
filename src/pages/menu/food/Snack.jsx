@@ -16,7 +16,9 @@ const Snack = ({ showNew }) => {
                       return (
                         <Link to={`${item.category}/${item2.id}`}>
                           <li key={item2.id}>
-                            <img src={item2.imgurl}></img>
+                            <div className="img">
+                              <img src={item2.imgurl}></img>
+                            </div>
                             <p>{item2.Kortitle}</p>
                           </li>
                         </Link>
@@ -31,7 +33,9 @@ const Snack = ({ showNew }) => {
                     return (
                       <Link to={`${item.category}/${item2.id}`}>
                         <li key={item2.id}>
-                          <img src={item2.imgurl}></img>
+                          <div className="img">
+                            <img src={item2.imgurl}></img>
+                          </div>
                           <p>{item2.Kortitle}</p>
                         </li>
                       </Link>
