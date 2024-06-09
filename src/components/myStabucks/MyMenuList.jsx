@@ -6,7 +6,9 @@ import { myMenuDel } from '../../store/modules/myStarbucksSlice.js';
 
 // My메뉴 리스트 목록
 const MyMenuList = () => {
-    const { tabMenus } = useSelector((state) => state.myStar);
+    // const { user } = useSelector((state) => state.authR);
+    // const { tabMenus } = useSelector((state) => state.myStar);
+    const { user, tabMenus } = useSelector((state) => state.myStar);
 
     const dispatch = useDispatch();
     const [chkData, setChkData] = useState(tabMenus);
@@ -14,7 +16,7 @@ const MyMenuList = () => {
 
     useEffect(() => {
         setChkData(tabMenus);
-    }, [tabMenus]);
+    }, [user, tabMenus]);
 
     const changeInput = (e) => {
         const { checked, name } = e.target;

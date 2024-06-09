@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import { onToggle, rewards } from '../../store/modules/myStarbucksSlice.js';
 
 const MyReward = () => {
+    // const { user } = useSelector((state) => state.authR);
+    // const { level, isShow } = useSelector((state) => state.myStar);
     const { user, level, isShow } = useSelector((state) => state.myStar);
 
     const dispatch = useDispatch();
@@ -20,7 +22,8 @@ const MyReward = () => {
     return (
         <MyRewardLi className={isShow.isReward === true ? 'on' : ''}>
             <strong className="acd-name">
-                My 리워드<i className="xi-angle-up" onClick={() => dispatch(onToggle({ key: 'isReward' }))}></i>
+                My 리워드
+                <i className="xi-angle-up" onClick={() => dispatch(onToggle({ key: 'isReward' }))}></i>
             </strong>
             <div className="acd-in">
                 <div>

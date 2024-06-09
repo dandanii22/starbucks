@@ -137,8 +137,10 @@ export const MyCarddLi = styled.li`
             .card {
                 flex: 1;
                 em {
+                    width: 100%;
                     img {
-                        width: 90%;
+                        margin: auto;
+                        width: 80%;
                         filter: drop-shadow(0 0 1px #ddd);
                     }
                 }
@@ -476,6 +478,7 @@ export const MyFrequencyLi = styled.li`
     }
 `;
 export const BarcodeWrap = styled.div`
+    text-align: center;
     position: absolute;
     left: 50%;
     top: 50%;
