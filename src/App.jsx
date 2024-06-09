@@ -18,6 +18,8 @@ import Notice from './pages/notice/Notice';
 import LayoutSub from './components/LayoutSub';
 import MyStabucks from './pages/myStabucks/MyStabucks';
 import BeforeLogin from './pages/login/BeforeLogin';
+import NoticeDetail from './components/notice/NoticeDetail';
+
 function App() {
   return (
     <>
