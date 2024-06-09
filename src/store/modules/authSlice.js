@@ -7,7 +7,7 @@ const initialState = {
               {
                   id: 1,
                   email: 'user1@naver.com',
-                  nickName: '스벅뉴비',
+                  nickName: '신규고객',
                   password: '123',
                   myReward: {
                       stars: 0,
@@ -19,7 +19,7 @@ const initialState = {
               {
                   id: 2,
                   email: 'user2@naver.com',
-                  nickName: '별명2',
+                  nickName: '장기고객',
                   password: '123',
                   myReward: {
                       stars: 15,
@@ -89,7 +89,7 @@ const initialState = {
     user: localStorage.getItem('user') || {},
 
     authed: false,
-    tabMenus: [],
+    // tabMenus: [],
     name: '',
     currentDate: '',
     keepData: localStorage.getItem('keepData') ? JSON.parse(localStorage.getItem('keepData')) : '',
@@ -108,20 +108,17 @@ export const authSlice = createSlice({
             if (newItem && newItem.password === password) {
                 state.user = newItem;
                 state.authed = true;
+                localStorage.setItem('user', JSON.stringify(newItem)); // 사용자 정보를 로컬스토리지에 저장
             } else {
                 alert('비밀번호를 잘못 입력하였습니다.');
                 state.authed = false;
             }
-            state.tabMenus = state.user.myMenus.filter((menu) => menu.cate === parseInt(1));
-            localStorage.setItem('user', JSON.stringify(state.user)); // 로그인한 사용자 정보를 로컬스토리지에 저장
         },
 
         logout: (state, action) => {
             if (state.user) {
                 // logData에서 현재 사용자 정보를 찾아 업데이트
-                const updatedLogData = state.logData.map((item) =>
-                    item.id === state.user.id ? { ...item, ...state.user } : item
-                );
+                const updatedLogData = state.logData.map((item) => (item.id === state.user.id ? { ...item, ...state.user } : item));
                 // 로컬스토리지에 업데이트된 logData 저장
                 localStorage.setItem('logData', JSON.stringify(updatedLogData));
                 state.logData = updatedLogData;
@@ -155,7 +152,6 @@ export const authSlice = createSlice({
             };
 
             state.currentDate = getDate();
-            console.log(state.currentDate);
         },
         keepID: (state, action) => {
             const { email, password } = action.payload;

@@ -17,6 +17,9 @@ export const myStarbucksSlice = createSlice({
     name: 'myStar',
     initialState,
     reducers: {
+        setUser: (state, action) => {
+            state.user = action.payload;
+        },
         rewards: (state, action) => {
             const { stars } = action.payload;
             if (stars < 5) {
@@ -32,7 +35,9 @@ export const myStarbucksSlice = createSlice({
             state.isShow[key] = !state.isShow[key];
         },
         myMenuChange: (state, action) => {
-            state.tabMenus = state.user.myMenus.filter((menu) => menu.cate === parseInt(action.payload));
+            const cate = action.payload || 1;
+            // state.tabMenus = state.user.myMenus.filter((menu) => menu.cate === parseInt(action.payload));
+            state.tabMenus = state.user.myMenus.filter((menu) => menu.cate === parseInt(cate));
         },
         myMenuDel: (state, action) => {
             state.tabMenus = state.tabMenus.filter((menu) => {
@@ -65,5 +70,5 @@ export const myStarbucksSlice = createSlice({
     },
 });
 
-export const { rewards, onToggle, myMenuChange, myMenuDel, updateCardNickname, rechargeCard } = myStarbucksSlice.actions;
+export const { setUser, rewards, onToggle, myMenuChange, myMenuDel, updateCardNickname, rechargeCard } = myStarbucksSlice.actions;
 export default myStarbucksSlice.reducer;
