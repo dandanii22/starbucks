@@ -38,11 +38,12 @@ const Login = () => {
         {
             keep ? dispatch(keepID(user)) : dispatch(removeKeep(user));
         }
-        {
-            authed ? navigate('/') : navigate('/login');
-        }
         dispatch(keepChk(keep));
     };
+
+        useEffect(() => {
+        authed ? navigate('/') : navigate('/login');
+    }, [authed]);
 
     return (
         <LoginWrap>
