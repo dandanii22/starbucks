@@ -1,8 +1,16 @@
 import { useState } from "react";
 import { FoodForm } from "./FoodStyle";
 
-const FoodInput = ({ setIsCheckCategory, isCheckCategory }) => {
+const FoodInput = ({
+  setIsCheckCategory,
+  isCheckCategory,
+  setOnThema,
+  onThema,
+}) => {
   const [showInput, setShowInput] = useState(true);
+  const onClickBtn = () => {
+    setOnThema(!onThema);
+  };
 
   return (
     <FoodForm>
@@ -16,8 +24,8 @@ const FoodInput = ({ setIsCheckCategory, isCheckCategory }) => {
       {showInput && (
         <>
           <div className="btn">
-            <button>카테고리</button>
-            <button>테마</button>
+            <button onClick={onClickBtn}>카테고리</button>
+            <button onClick={onClickBtn}>테마</button>
           </div>
           <div>
             <div className="checkbox">

@@ -85,6 +85,17 @@ export const FoodForm = styled.div`
       }
     }
   }
+  .themaSort {
+    display: flex;
+    padding: 20px;
+
+    li {
+      button {
+        border: none;
+        background: none;
+      }
+    }
+  }
 
   .checkbox {
     margin: 0 30px;
@@ -364,6 +375,34 @@ export const FoodChoice = styled.form`
       }
       &:last-child {
         background: #000;
+      }
+    }
+  }
+`;
+export const FoodSortList = styled.li`
+  margin-right: 20px;
+`;
+
+export const FoodListUl = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  width: 1700px;
+  margin-top: 50px;
+  li {
+    margin-right: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    .lidiv {
+      overflow: hidden;
+
+      img {
+        width: 270px;
+        height: 270px;
+        transition: 1s;
+        margin-bottom: 10px;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

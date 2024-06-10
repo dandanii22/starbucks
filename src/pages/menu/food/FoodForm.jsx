@@ -12,6 +12,8 @@ import Soup from "./Soup";
 import data from "../../../assets/api/foodData";
 import CategoryFood from "./CategoryFood";
 import { useState } from "react";
+import FoodThemeInput from "./FoodThemeInput";
+import FoodThemeList from "./FoodThemeList";
 const FoodForm = () => {
   const [isCheckCategory, setIsCheckCategory] = useState({
     all: true,
@@ -33,42 +35,55 @@ const FoodForm = () => {
 
   //아이콘 있는 데이터만 추출
   const filterNewData = newfoodData.filter((item2) => item2.icon === "new");
-
-  const newData = (e) => {
-    setShowNew(e.target.checked);
-  };
+  const [onThema, setOnThema] = useState(false);
+  const [currentThema, setCurrentThema] = useState("summer");
 
   return (
     <FoodWrap>
       <FoodSubVisual />
       <div className="inner">
-        <FoodInput
-          setIsCheckCategory={setIsCheckCategory}
-          isCheckCategory={isCheckCategory}
-        />
-        <div className="foodmenu">
-          <div className="select">
-            <FoodSelect showNew={showNew} setShowNew={setShowNew} />
-          </div>
+        {onThema ? (
+          <>
+            <FoodThemeInput
+              setOnThema={setOnThema}
+              setCurrentThema={setCurrentThema}
+              currentThema={currentThema}
+            />
+            <FoodThemeList currentThema={currentThema} />
+          </>
+        ) : (
+          <>
+            <FoodInput
+              setIsCheckCategory={setIsCheckCategory}
+              isCheckCategory={isCheckCategory}
+              setOnThema={setOnThema}
+              onThema={onThema}
+            />
+            <div className="foodmenu">
+              <div className="select">
+                <FoodSelect showNew={showNew} setShowNew={setShowNew} />
+              </div>
 
-          <div className="food">
-            {isCheckCategory.all ? (
-              <>
-                <CategoryFood showNew={showNew} />
-              </>
-            ) : (
-              <>
-                {isCheckCategory.bread && <Bread showNew={showNew} />}
-                {isCheckCategory.cake && <Cake showNew={showNew} />}
-                {isCheckCategory.sandwich && <Sandwich showNew={showNew} />}
-                {isCheckCategory.soup && <Soup showNew={showNew} />}
-                {isCheckCategory.fruit && <Fruit showNew={showNew} />}
-                {isCheckCategory.snack && <Snack showNew={showNew} />}
-                {isCheckCategory.icecream && <Icecream showNew={showNew} />}
-              </>
-            )}
-          </div>
-        </div>
+              <div className="food">
+                {isCheckCategory.all ? (
+                  <>
+                    <CategoryFood showNew={showNew} />
+                  </>
+                ) : (
+                  <>
+                    {isCheckCategory.bread && <Bread showNew={showNew} />}
+                    {isCheckCategory.cake && <Cake showNew={showNew} />}
+                    {isCheckCategory.sandwich && <Sandwich showNew={showNew} />}
+                    {isCheckCategory.soup && <Soup showNew={showNew} />}
+                    {isCheckCategory.fruit && <Fruit showNew={showNew} />}
+                    {isCheckCategory.snack && <Snack showNew={showNew} />}
+                    {isCheckCategory.icecream && <Icecream showNew={showNew} />}
+                  </>
+                )}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </FoodWrap>
   );

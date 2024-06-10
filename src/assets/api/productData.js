@@ -7,7 +7,7 @@ const productData = [
     data: [
       {
         id: 1,
-        imgurl: "../../images/product/Mug1.jpg",
+        imgurl: "../../images/product/mug/Mug1.jpg",
         title: "프렌치 서머 라인 머그 355ml",
         kor: "프렌치 서머 라인 머그 355ml",
         eng: "French summer line mug 355ml",
@@ -17,7 +17,7 @@ const productData = [
       },
       {
         id: 2,
-        imgurl: "../../images/product/Mug2.jpg",
+        imgurl: "../../images/product/mug/Mug2.jpg",
         title: "SS 리저브 블랙 DW 머그 355ml",
 
         kor: "SS 리저브 블랙 DW 머그 355ml",
@@ -28,7 +28,7 @@ const productData = [
       },
       {
         id: 3,
-        imgurl: "../../images/product/Mug3.jpg",
+        imgurl: "../../images/product/mug/Mug3.jpg",
         title: "그레이 리저브 머그 355ml",
 
         kor: "그레이 리저브 머그 355ml",
@@ -39,7 +39,7 @@ const productData = [
       },
       {
         id: 4,
-        imgurl: "../../images/product/Mug4.jpg",
+        imgurl: "../../images/product/mug/Mug4.jpg",
         title: "그린 사이렌 도트 머그 237ml",
 
         kor: "그린 사이렌 도트 머그 237ml",
@@ -50,7 +50,7 @@ const productData = [
       },
       {
         id: 5,
-        imgurl: "../../images/product/Mug5.jpg",
+        imgurl: "../../images/product/mug/Mug5.jpg",
         title: "도도새 머그 355mll",
 
         kor: "도도새 머그 355ml",
@@ -61,7 +61,7 @@ const productData = [
       },
       {
         id: 6,
-        imgurl: "../../images/product/Mug6.jpg",
+        imgurl: "../../images/product/mug/Mug6.jpg",
         title: "사이렌 클래식 민트 머그 237ml",
 
         kor: "사이렌 클래식 민트 머그 237ml",
@@ -72,7 +72,7 @@ const productData = [
       },
       {
         id: 7,
-        imgurl: "../../images/product/Mug7.jpg",
+        imgurl: "../../images/product/mug/Mug7.jpg",
         title: "사이렌 하우스 머그 473ml",
 
         kor: "사이렌 하우스 머그 237ml",
@@ -83,7 +83,7 @@ const productData = [
       },
       {
         id: 8,
-        imgurl: "../../images/product/Mug8.jpg",
+        imgurl: "../../images/product/mug/Mug8.jpg",
         title: "야나칸 머메이트 핀칭컵 240ml",
         kor: "야나칸 머메이트 핀칭컵 240ml",
         eng: "Yarnnakarn mermaid pinching cup 240ml",
@@ -93,7 +93,7 @@ const productData = [
       },
       {
         id: 9,
-        imgurl: "../../images/product/Mug9.jpg",
+        imgurl: "../../images/product/mug/Mug9.jpg",
         title: "제주 조랑말 머그 355ml",
 
         kor: "제주 조랑말 머그 355ml",
@@ -104,7 +104,7 @@ const productData = [
       },
       {
         id: 10,
-        imgurl: "../../images/product/Mug10.jpg",
+        imgurl: "../../images/product/mug/Mug10.jpg",
         title: "커뮤니티스토어 베어 머그 355ml",
 
         kor: "커뮤니티스토어 베어 머그 355ml",
@@ -121,7 +121,7 @@ const productData = [
     data: [
       {
         id: 1,
-        imgurl: "../../images/product/Glass1.jpg",
+        imgurl: "../../images/product/glass/Glass1.jpg",
         title: "사이렌 글라스 콜드컵 503ml",
 
         kor: "사이렌 글라스 콜드컵 503ml",
@@ -132,7 +132,7 @@ const productData = [
       },
       {
         id: 2,
-        imgurl: "../../images/product/Glass2.jpg",
+        imgurl: "../../images/product/glass/Glass2.jpg",
         title: "프렌치 서머 라인 글라스 444ml",
 
         kor: "프렌치 서머 라인 글라스 444ml",
@@ -143,7 +143,7 @@ const productData = [
       },
       {
         id: 3,
-        imgurl: "../../images/product/Glass3.jpg",
+        imgurl: "../../images/product/glass/Glass3.jpg",
         title: "그린 사이렌 글라스 500ml",
 
         kor: "그린 사이렌 글라스 500ml",
@@ -154,7 +154,7 @@ const productData = [
       },
       {
         id: 4,
-        imgurl: "../../images/product/Glass4.jpg",
+        imgurl: "../../images/product/glass/Glass4.jpg",
         title: "제주 감귤 글라스 355ml",
 
         kor: "제주 감귤 글라스 355ml",
@@ -165,7 +165,7 @@ const productData = [
       },
       {
         id: 5,
-        imgurl: "../../images/product/Glass5.jpg",
+        imgurl: "../../images/product/glass/Glass5.jpg",
         title: "제주 스태킹 글라스 2p 세트",
 
         kor: "제주 스태킹 글라스 2p 세트",
@@ -176,7 +176,7 @@ const productData = [
       },
       {
         id: 6,
-        imgurl: "../../images/product/Glass6.jpg",
+        imgurl: "../../images/product/glass/Glass6.jpg",
         title: "리저브 골드 핸들 글라스 473ml",
 
         kor: "리저브 골드 핸들 글라스 473m",
@@ -193,7 +193,7 @@ const productData = [
     data: [
       {
         id: 1,
-        imgurl: "../../images/product/Plastic1.jpg",
+        imgurl: "../../images/product/plastic/Plastic1.jpg",
         title: "파스텔 블루 텀블러 473ml",
 
         kor: "파스텔 블루 텀블러 473ml",
@@ -204,7 +204,7 @@ const productData = [
       },
       {
         id: 2,
-        imgurl: "../../images/product/Plastic2.jpg",
+        imgurl: "../../images/product/plastic/Plastic2.jpg",
         title: "파스텔 핑크 텀블러 473ml",
 
         kor: "파스텔 핑크 텀블러 473ml",
@@ -215,7 +215,7 @@ const productData = [
       },
       {
         id: 3,
-        imgurl: "../../images/product/Plastic3.jpg",
+        imgurl: "../../images/product/plastic/Plastic3.jpg",
         title: "골드 칼리도스코프 콜드컵 710ml",
 
         kor: "골드 칼리도스코프 콜드컵 710ml",
@@ -226,7 +226,7 @@ const productData = [
       },
       {
         id: 4,
-        imgurl: "../../images/product/Plastic4.jpg",
+        imgurl: "../../images/product/plastic/Plastic4.jpg",
         title: "그린 리유저블 콜드컵 709ml",
 
         kor: "그린 리유저블 콜드컵 709ml",
@@ -237,7 +237,7 @@ const productData = [
       },
       {
         id: 5,
-        imgurl: "../../images/product/Plastic5.jpg",
+        imgurl: "../../images/product/plastic/Plastic5.jpg",
         title: "그린 워드마크 폼 콜드컵 473ml",
 
         kor: "그린 워드마크 폼 콜드컵 473ml",
@@ -248,7 +248,7 @@ const productData = [
       },
       {
         id: 6,
-        imgurl: "../../images/product/Plastic6.jpg",
+        imgurl: "../../images/product/plastic/Plastic6.jpg",
         title: "사이렌 커피 체리 콜드컵 473ml",
 
         kor: "사이렌 커피 체리 콜드컵 473ml",
@@ -259,7 +259,7 @@ const productData = [
       },
       {
         id: 7,
-        imgurl: "../../images/product/Plastic7.jpg",
+        imgurl: "../../images/product/plastic/Plastic7.jpg",
         title: "크레이브 하우스 워터보틀 500ml",
 
         kor: "크레이브 하우스 워터보틀 500ml",
@@ -270,7 +270,7 @@ const productData = [
       },
       {
         id: 8,
-        imgurl: "../../images/product/Plastic8.jpg",
+        imgurl: "../../images/product/plastic/Plastic8.jpg",
         title: "제주 동백 레나 워터보틀 473ml",
 
         kor: "제주 동백 레나 워터보틀 473ml",
@@ -287,7 +287,7 @@ const productData = [
     data: [
       {
         id: 1,
-        imgurl: "../../images/product/Stainless1.jpg",
+        imgurl: "../../images/product/stainless/Stainless1.jpg",
         title: "SS 프렌치 서머 데비 텀블러 473ml",
 
         kor: "SS 프렌치 서머 데비 텀블러 473ml",
@@ -298,7 +298,7 @@ const productData = [
       },
       {
         id: 2,
-        imgurl: "../../images/product/Stainless2.jpg",
+        imgurl: "../../images/product/stainless/Stainless2.jpg",
         title: "SS 경주 투어 텀블러 355ml",
 
         kor: "SS 경주 투어 텀블러 355ml",
@@ -309,7 +309,7 @@ const productData = [
       },
       {
         id: 3,
-        imgurl: "../../images/product/Stainless3.jpg",
+        imgurl: "../../images/product/stainless/Stainless3.jpg",
         title: "SS 나수 하우스 텀블러 355ml",
 
         kor: "SS 나수 하우스 텀블러 355ml",
@@ -321,7 +321,7 @@ const productData = [
       },
       {
         id: 4,
-        imgurl: "../../images/product/Stainless4.jpg",
+        imgurl: "../../images/product/stainless/Stainless4.jpg",
         title: "SS 뉴트럴 밸류 텀블러 473ml",
 
         kor: "SS 뉴트럴 밸류 텀블러 473ml",
@@ -332,7 +332,7 @@ const productData = [
       },
       {
         id: 5,
-        imgurl: "../../images/product/Stainless5.jpg",
+        imgurl: "../../images/product/stainless/Stainless5.jpg",
         title: "SS 도도새 코나 텀블러 237ml",
 
         kor: "SS 도도새 코나 텀블러 237ml",
@@ -343,7 +343,7 @@ const productData = [
       },
       {
         id: 6,
-        imgurl: "../../images/product/Stainless6.jpg",
+        imgurl: "../../images/product/stainless/Stainless6.jpg",
         title: "SS 리저브 그레이 텀블러 355ml",
 
         kor: "SS 리저브 그레이 텀블러 355ml",
@@ -354,7 +354,7 @@ const productData = [
       },
       {
         id: 7,
-        imgurl: "../../images/product/Stainless7.jpg",
+        imgurl: "../../images/product/stainless/Stainless7.jpg",
         title: "SS 미르 리저브 골드 텀블러 473ml",
 
         kor: "SS 미르 리저브 골드 텀블러 473ml",
@@ -365,7 +365,7 @@ const productData = [
       },
       {
         id: 8,
-        imgurl: "../../images/product/Stainless8.jpg",
+        imgurl: "../../images/product/stainless/Stainless8.jpg",
         title: "SS 부산 투어 텀블러 355m",
 
         kor: "SS 부산 투어 텀블러 355m",
@@ -377,7 +377,7 @@ const productData = [
       },
       {
         id: 9,
-        imgurl: "../../images/product/Stainless9.jpg",
+        imgurl: "../../images/product/stainless/Stainless9.jpg",
         title: "SS 블랙 탱크 텀블러 503ml",
 
         kor: "SS 블랙 탱크 텀블러 503ml",
@@ -388,7 +388,7 @@ const productData = [
       },
       {
         id: 10,
-        imgurl: "../../images/product/Stainless10.jpg",
+        imgurl: "../../images/product/stainless/Stainless10.jpg",
         title: "SS 서울 투어 텀블러 355ml",
 
         kor: "SS 서울 투어 텀블러 355ml",
@@ -399,7 +399,7 @@ const productData = [
       },
       {
         id: 11,
-        imgurl: "../../images/product/Stainless11.jpg",
+        imgurl: "../../images/product/stainless/Stainless11.jpg",
         title: "SS 스탠리 리저브 골드 텀블러 473ml",
 
         kor: "SS 스탠리 리저브 골드 텀블러 473ml",
@@ -410,7 +410,7 @@ const productData = [
       },
       {
         id: 12,
-        imgurl: "../../images/product/Stainless12.jpg",
+        imgurl: "../../images/product/stainless/Stainless12.jpg",
         title: "SS 제주 투어 텀블러 355ml",
 
         kor: "SS 제주 투어 텀블러 355ml",
@@ -421,7 +421,7 @@ const productData = [
       },
       {
         id: 13,
-        imgurl: "../../images/product/Stainless13.jpg",
+        imgurl: "../../images/product/stainless/Stainless13.jpg",
         title: "SS 코리아 블랙 텀블러 473ml",
 
         kor: "SS 코리아 블랙 텀블러 473ml",
@@ -432,7 +432,7 @@ const productData = [
       },
       {
         id: 14,
-        imgurl: "../../images/product/Stainless14.jpg",
+        imgurl: "../../images/product/stainless/Stainless14.jpg",
         title: "SS 콩코드 하우스 텀블러 473ml",
 
         kor: "SS 콩코드 하우스 텀블러 473ml",
@@ -450,7 +450,7 @@ const productData = [
     data: [
       {
         id: 1,
-        imgurl: "../../images/product/Thermos1.jpg",
+        imgurl: "../../images/product/thermos/Thermos1.jpg",
         title: "JNO 하우스 보온병 500ml",
 
         kor: "JNO 하우스 보온병 500ml",
@@ -461,7 +461,7 @@ const productData = [
       },
       {
         id: 2,
-        imgurl: "../../images/product/Thermos2.jpg",
+        imgurl: "../../images/product/thermos/Thermos2.jpg",
         title: "프렌치 서머 FFW 보온병 1000ml",
 
         kor: "프렌치 서머 FFW 보온병 1000ml",
@@ -472,7 +472,7 @@ const productData = [
       },
       {
         id: 3,
-        imgurl: "../../images/product/Thermos3.jpg",
+        imgurl: "../../images/product/thermos/Thermos3.jpg",
         title: "프렌치 서머 캐리 핸들 보온병 500ml",
 
         kor: "프렌치 서머 캐리 핸들 보온병 500ml",
@@ -490,7 +490,7 @@ const productData = [
     data: [
       {
         id: 1,
-        imgurl: "../../images/product/Accessory1.jpg",
+        imgurl: "../../images/product/accessory/Accessory1.jpg",
         title: "블랙앤그린 실리콘 코스터 4p",
 
         kor: "블랙앤그린 실리콘 코스터 4p",
@@ -501,7 +501,7 @@ const productData = [
       },
       {
         id: 2,
-        imgurl: "../../images/product/Accessory2.jpg",
+        imgurl: "../../images/product/accessory/Accessory2.jpg",
         title: "여수돌산 패브릭 코스터 세트 (3P)",
 
         kor: "여수돌산 패브릭 코스터 세트 (3P)",
@@ -512,7 +512,7 @@ const productData = [
       },
       {
         id: 3,
-        imgurl: "../../images/product/Accessory3.jpg",
+        imgurl: "../../images/product/accessory/Accessory3.jpg",
         title: "제주 베어리스타 머들러",
 
         kor: "제주 베어리스타 머들러",
@@ -523,7 +523,7 @@ const productData = [
       },
       {
         id: 4,
-        imgurl: "../../images/product/Accessory4.jpg",
+        imgurl: "../../images/product/accessory/Accessory4.jpg",
         title: "스타벅스 베이스볼 베어리스타",
 
         kor: "스타벅스 베이스볼 베어리스타",
@@ -534,7 +534,7 @@ const productData = [
       },
       {
         id: 5,
-        imgurl: "../../images/product/Accessory5.jpg",
+        imgurl: "../../images/product/accessory/Accessory5.jpg",
         title: "스타벅스 하우스 토트백",
 
         kor: "스타벅스 하우스 토트백",
@@ -545,7 +545,7 @@ const productData = [
       },
       {
         id: 6,
-        imgurl: "../../images/product/Accessory6.jpg",
+        imgurl: "../../images/product/accessory/Accessory6.jpg",
         title: "제주 동백 트래블 파우치",
 
         kor: "제주 동백 트래블 파우치",
@@ -556,7 +556,7 @@ const productData = [
       },
       {
         id: 7,
-        imgurl: "../../images/product/Accessory7.jpg",
+        imgurl: "../../images/product/accessory/Accessory7.jpg",
         title: "데스티네이션 가죽 케이스",
 
         kor: "데스티네이션 가죽 케이스",
@@ -567,7 +567,7 @@ const productData = [
       },
       {
         id: 8,
-        imgurl: "../../images/product/Accessory8.jpg",
+        imgurl: "../../images/product/accessory/Accessory8.jpg",
         title: "데스티네이션 미니 크로스 백",
 
         kor: "데스티네이션 미니 크로스 백",
@@ -578,7 +578,7 @@ const productData = [
       },
       {
         id: 9,
-        imgurl: "../../images/product/Accessory9.jpg",
+        imgurl: "../../images/product/accessory/Accessory9.jpg",
         title: "버디 릴와이어 타월",
 
         kor: "버디 릴와이어 타월",
@@ -589,7 +589,7 @@ const productData = [
       },
       {
         id: 10,
-        imgurl: "../../images/product/Accessory10.jpg",
+        imgurl: "../../images/product/accessory/Accessory10.jpg",
         title: "버디 멀티 파우치",
 
         kor: "버디 멀티 파우치",
@@ -606,7 +606,7 @@ const productData = [
     data: [
       {
         id: 1,
-        imgurl: "../../images/product/Gift1.jpg",
+        imgurl: "../../images/product/gift/Gift1.jpg",
         title: "(c)사이렌 글라스볼 우드스푼세트",
 
         kor: "(c)사이렌 글라스볼 우드스푼세트",
@@ -617,7 +617,7 @@ const productData = [
       },
       {
         id: 2,
-        imgurl: "../../images/product/Gift2.jpg",
+        imgurl: "../../images/product/gift/Gift2.jpg",
         title: "리유저블 & 글라스 세트",
 
         kor: "리유저블 & 글라스 세트",
@@ -628,7 +628,7 @@ const productData = [
       },
       {
         id: 3,
-        imgurl: "../../images/product/Gift3.jpg",
+        imgurl: "../../images/product/gift/Gift3.jpg",
         title: "리유저블 & 머그 세트",
 
         kor: "리유저블 & 머그 세트",
@@ -639,7 +639,7 @@ const productData = [
       },
       {
         id: 4,
-        imgurl: "../../images/product/Gift4.jpg",
+        imgurl: "../../images/product/gift/Gift4.jpg",
         title: "우리 쌀 파우더",
 
         kor: "우리 쌀 파우더",
@@ -650,7 +650,7 @@ const productData = [
       },
       {
         id: 5,
-        imgurl: "../../images/product/Gift5.jpg",
+        imgurl: "../../images/product/gift/Gift5.jpg",
         title: "우리 쑥 파우더",
 
         kor: "우리 쑥 파우더",
@@ -667,7 +667,7 @@ const productData = [
     data: [
       {
         id: 1,
-        imgurl: "../../images/product/Tea1.jpg",
+        imgurl: "../../images/product/tea/Tea1.jpg",
         title: "티바나 민트 블렌드 12개입",
 
         kor: "티바나 민트 블렌드 12개입",
@@ -678,7 +678,7 @@ const productData = [
       },
       {
         id: 2,
-        imgurl: "../../images/product/Tea2.jpg",
+        imgurl: "../../images/product/tea/Tea2.jpg",
         title: "티바나 얼 그레이 12개입",
 
         kor: "티바나 얼 그레이 12개입",
@@ -689,7 +689,7 @@ const productData = [
       },
       {
         id: 3,
-        imgurl: "../../images/product/Tea3.jpg",
+        imgurl: "../../images/product/tea/Tea3.jpg",
         title: "티바나 유스베리 12개입",
 
         kor: "티바나 유스베리 12개입",
@@ -700,7 +700,7 @@ const productData = [
       },
       {
         id: 4,
-        imgurl: "../../images/product/Tea4.jpg",
+        imgurl: "../../images/product/tea/Tea4.jpg",
         title: "티바나 제주녹차(15개입)",
 
         kor: "티바나 제주녹차(15개입)",
