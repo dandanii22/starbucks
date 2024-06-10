@@ -394,6 +394,8 @@ export const FoodListUl = styled.ul`
     text-align: center;
     .lidiv {
       overflow: hidden;
+      width: 270px;
+      height: 270px;
 
       img {
         width: 270px;
