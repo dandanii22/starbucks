@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 import { FaCircleCheck } from 'react-icons/fa6';
 export const LoginBefore = styled.div`
-    padding: 100px 0;
-    width: 100%;
+ margin: 200px auto;
+    width: 1520px;
     display: flex;
+    justify-content: center;
     img {
         width: 250px;
     }
 
     .please {
+        margin-left: 40px;
         h3 {
             font-size: 40px;
             font-weight: bold;
