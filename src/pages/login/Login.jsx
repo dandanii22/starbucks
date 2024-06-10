@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { LoginWrap } from './LoginStyle';
 import { FaCheck } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
