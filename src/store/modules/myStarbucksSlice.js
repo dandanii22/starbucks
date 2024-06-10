@@ -1,11 +1,20 @@
 // 2. 비동기 X
 import { createSlice } from '@reduxjs/toolkit';
+import drinkData from '../../assets/api/drinkData';
 
 const initialState = {
     user: JSON.parse(localStorage.getItem('user')) || {},
     tabMenus: [],
     level: null,
-    isShow: { isReward: true, isCard: true, isFre: true, isMenu: true, isShowEx: true, isBarcode: false },
+    isShow: {
+        isReward: true,
+        isCard: true,
+        isFre: true,
+        isMenu: true,
+        isShowEx: true,
+        isBarcode: false,
+    },
+    detail: null,
 };
 
 // user가 존재하고 myMenus가 정의된 경우에만 필터링
@@ -67,8 +76,20 @@ export const myStarbucksSlice = createSlice({
                 localStorage.setItem('user', JSON.stringify(state.user));
             }
         },
+        handleDetail: (state, action) => {
+            const cateNum = action.payload.cate;
+            const korName = action.payload.kor;
+            if (cateNum === 1) {
+                for (const category of drinkData) {
+                    const found = category.data.find((drink) => drink.kor === korName);
+                    if (found) {
+                        state.detail = `/drinkMenu/${category.category}/${found.id}`;
+                    }
+                }
+            }
+        },
     },
 });
 
-export const { setUser, rewards, onToggle, myMenuChange, myMenuDel, updateCardNickname, rechargeCard } = myStarbucksSlice.actions;
+export const { setUser, rewards, onToggle, myMenuChange, myMenuDel, updateCardNickname, rechargeCard, handleDetail } = myStarbucksSlice.actions;
 export default myStarbucksSlice.reducer;
