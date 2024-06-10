@@ -166,7 +166,7 @@ export const authSlice = createSlice({
         removeKeep: (state, action) => {
             localStorage.removeItem('keepData');
         },
-                addMymenus: (state, action) => {
+        addMymenus: (state, action) => {
             state.user.myMenus.push(action.payload);
             localStorage.setItem('user', JSON.stringify(state.user));
         },
