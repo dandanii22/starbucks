@@ -30,7 +30,7 @@ export const ProductWrap = styled.div`
       position: absolute;
       right: 0;
       top: 40px;
-      z-index: 1000;
+      z-index: 10;
     }
 
     .product {
