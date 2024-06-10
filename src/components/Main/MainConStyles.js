@@ -123,12 +123,25 @@ export const Maincon3Wrap = styled.div`
                 font-size: 40px;
                 font-weight: lighter;
             }
-            span {
+            // 볼드체 공용
+            .txt-bold {
+                font-weight: 600;
+                &.gold {
+                    color: #bd9b60;
+                }
+                &.green {
+                    color: #006633;
+                }
+                &.gray {
+                    color: gray;
+                }
+            }
+            /* span {
                 font-weight: bold;
                 &.color {
                     color: #007042;
                 }
-            }
+            } */
             p {
                 margin-top: 10px;
                 font-size: 20px;
