@@ -57,7 +57,7 @@ const MyMenuList = () => {
                         </td>
                         <td>NO</td>
                         <td>음료명</td>
-                        <td>퍼스널 옵션</td>
+                        <td>옵션</td>
                         <td>등록일</td>
                     </tr>
                 </thead>

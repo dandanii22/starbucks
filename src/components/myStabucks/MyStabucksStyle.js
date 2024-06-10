@@ -653,6 +653,27 @@ export const MyMenuListTbody = styled.tbody`
             }
             &:nth-of-type(3) {
                 cursor: pointer;
+                overflow: hidden;
+                height: 50px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding: 0 10px;
+            }
+            &:nth-of-type(4) {
+                display: block;
+                overflow: hidden;
+                width: 320px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                span {
+                    &:not(:first-child) {
+                        margin-left: 5px;
+                    }
+                    &:not(:last-child)::after {
+                        content: ' |';
+                        color: #ddd;
+                    }
+                }
             }
         }
     }
@@ -699,7 +720,7 @@ export const MyMenuDetailDiv = styled.div`
         margin-top: 40px;
         justify-content: start;
         align-items: start;
-        em {
+        > em {
             width: 270px;
             background: #fff;
             display: flex;
@@ -720,7 +741,7 @@ export const MyMenuDetailDiv = styled.div`
                 font-size: 14px;
                 gap: 40px;
                 padding: 15px 0;
-                &:nth-of-type(-n + 2) {
+                &:nth-of-type(1) {
                     border-bottom: 1px solid #aaa;
                 }
                 &:last-child {
@@ -738,14 +759,25 @@ export const MyMenuDetailDiv = styled.div`
                     }
                 }
                 b {
+                    display: block;
+                    flex: 1;
                     border: 1px solid #000;
                     width: 70px;
                     border: none;
                     font-weight: 600;
                 }
                 span {
+                    flex: 2;
+                    width: 200px;
                     font-size: 14px;
                     text-align: left;
+                    overflow: hidden;
+                    em {
+                        display: block;
+                        &::after {
+                            /* content: ', '; */
+                        }
+                    }
                 }
             }
         }
