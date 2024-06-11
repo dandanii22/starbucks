@@ -121,12 +121,18 @@ const NavBar = () => {
                             <Link to="before">MY STARBUCKS</Link>
                         )}
                     </li>
-                    <li>
-                        <Link to="mycart">
-                            MY CART
-                            <span>0</span>
-                        </Link>
-                    </li>
+                       <li>
+            {authed ? (
+              <Link to="mycart">
+                MY CART
+                <span>{cart.length}</span>
+              </Link>
+            ) : (
+              <Link to="before">
+                MY CART<span>{cart.length}</span>
+              </Link>
+            )}
+          </li>
                 </ul>
                 <TopMenu>
                     {authed ? (
