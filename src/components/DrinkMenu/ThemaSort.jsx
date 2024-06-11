@@ -28,7 +28,9 @@ const ThemaSort = ({ goThema, setGoThema }) => {
         {isSort ? (
           <>
             <ul className="drinkCategory">
-              <li className="category">카테고리</li>
+              <li className="category" onClick={() => {
+                  setGoThema(false);
+                }}>카테고리</li>
               <li
                 className="category on"
                 onClick={() => {
