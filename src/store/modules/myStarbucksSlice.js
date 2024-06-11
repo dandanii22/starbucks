@@ -106,9 +106,9 @@ export const myStarbucksSlice = createSlice({
                 }
             }
         },
-        addMymenus: (state, action) => {
+               addMymenus: (state, action) => {
             const existingMenu = state.user.myMenus.find((menu) => menu.kor === action.payload.kor);
-            if (existingMenu) {
+            if (existingMenu || existingMenu !== undefined) {
                 alert('이미 추가하신 메뉴입니다.');
             } else {
                 state.user.myMenus.push(action.payload);
