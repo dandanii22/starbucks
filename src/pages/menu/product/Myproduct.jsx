@@ -2,8 +2,8 @@ import { ProductChoice } from "./ProductStyle";
 import data from "../../../assets/api/productData";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addMymenus } from "../../../store/modules/authSlice";
-import { useState } from "react";
+import { addMymenus } from "../../../store/modules/myStarbucksSlice";
+import { useState, useRef } from "react";
 
 const Myproduct = ({ setContet, content }) => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const Myproduct = ({ setContet, content }) => {
   const { user } = useSelector((state) => state.authR);
   const { myMenus } = user;
   const [productOption, setProductOption] = useState({});
-
+  const idRef = useRef(user.myMenus ? user.myMenus.length + 1 : 0);
   const productData = data.filter((item) => {
     return item.category === category;
   });
@@ -31,7 +31,7 @@ const Myproduct = ({ setContet, content }) => {
     e.preventDefault();
     dispatch(
       addMymenus({
-        id: thisProduct.id,
+        id: idRef.current++,
         goodsNo: productID,
         cate: 3,
         kor: thisProduct.kor,

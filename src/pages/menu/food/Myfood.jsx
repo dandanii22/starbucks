@@ -2,7 +2,7 @@ import { FoodChoice } from "./FoodStyle";
 import data from "../../../assets/api/foodData";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addMymenus } from "../../../store/modules/authSlice";
+import { addMymenus } from "../../../store/modules/myStarbucksSlice";
 import { useRef, useState } from "react";
 
 const Myfood = ({ setContet, content }) => {
@@ -11,7 +11,7 @@ const Myfood = ({ setContet, content }) => {
   const { foodID, category } = useParams();
   const { myMenus } = user;
   const [foodOption, setFoodOption] = useState({ warm: "따뜻하게 데움" });
-
+  const idRef = useRef(user.myMenus ? user.myMenus.length + 1 : 0);
   const foodData = data.filter((item) => {
     return item.category === category;
   });
@@ -36,7 +36,7 @@ const Myfood = ({ setContet, content }) => {
     e.preventDefault();
     dispatch(
       addMymenus({
-        id: thisFood.id,
+        id: idRef.current++,
         foodNo: foodID,
         cate: 2,
         kor: thisFood.kor,
