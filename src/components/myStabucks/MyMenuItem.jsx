@@ -22,12 +22,12 @@ const MyMenuItem = ({ menu, index, changeInput }) => {
     };
     return (
         <>
-            {isDetail && (
-                <OverlayWrap>
-                    <MyMenuDetail onToggle={onToggle} kor={kor} />
-                </OverlayWrap>
-            )}
             <MyMenuListTbody>
+                {isDetail && (
+                    <OverlayWrap>
+                        <MyMenuDetail onToggle={onToggle} kor={kor} />
+                    </OverlayWrap>
+                )}
                 <tr>
                     <td>
                         <p>

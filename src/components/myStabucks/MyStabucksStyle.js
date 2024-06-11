@@ -559,7 +559,7 @@ export const BarcodeWrap = styled.div`
         }
     }
 `;
-export const OverlayWrap = styled.div`
+export const OverlayWrap = styled.tr`
     position: fixed;
     top: 0;
     left: 0;
@@ -630,15 +630,14 @@ export const MyMenuListTable = styled.table`
     }
     thead {
         tr {
-            line-height: 50px;
             font-weight: 600;
             border-top: 2px solid #000;
             border-bottom: 3px solid #000;
+            line-height: 50px;
         }
     }
     tbody {
         tr {
-            line-height: 60px;
             border-bottom: 1px solid #000;
         }
     }
@@ -646,6 +645,7 @@ export const MyMenuListTable = styled.table`
 export const MyMenuListTbody = styled.tbody`
     tr {
         td {
+            padding: 20px 0;
             &:first-child {
                 p {
                     text-align: center;
@@ -654,7 +654,6 @@ export const MyMenuListTbody = styled.tbody`
             &:nth-of-type(3) {
                 cursor: pointer;
                 overflow: hidden;
-                height: 50px;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 padding: 0 10px;
@@ -679,9 +678,9 @@ export const MyMenuListTbody = styled.tbody`
     }
 `;
 
-export const MyMenuDetailDiv = styled.div`
+export const MyMenuDetailTd = styled.td`
     width: 680px;
-    height: 480px;
+    height: 500px;
     box-sizing: border-box;
     position: absolute;
     left: 50%;
@@ -689,7 +688,9 @@ export const MyMenuDetailDiv = styled.div`
     transform: translate(-50%, -50%);
     background: #fff;
     background-image: url(./images/myStarbucks/menu_bg.jpeg);
-    padding: 60px;
+    &.detail-popup {
+        padding: 60px;
+    }
     i {
         position: absolute;
         right: 0;
@@ -709,8 +710,9 @@ export const MyMenuDetailDiv = styled.div`
         font-size: 20px;
         font-weight: 600;
         color: #006633;
+        line-height: 1;
     }
-    span {
+    > span {
         font-size: 24px;
         font-weight: 600;
     }
@@ -740,9 +742,13 @@ export const MyMenuDetailDiv = styled.div`
                 display: flex;
                 font-size: 14px;
                 gap: 40px;
-                padding: 15px 0;
+                padding: 20px 0;
                 &:nth-of-type(1) {
                     border-bottom: 1px solid #aaa;
+                }
+                &:nth-of-type(2) {
+                    span {
+                    }
                 }
                 &:last-child {
                     border-top: 1px solid #000;
@@ -772,8 +778,11 @@ export const MyMenuDetailDiv = styled.div`
                     font-size: 14px;
                     text-align: left;
                     overflow: hidden;
+                    line-height: 1.6;
+
                     em {
                         display: block;
+                        line-height: 1.6;
                         &::after {
                             /* content: ', '; */
                         }

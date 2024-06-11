@@ -1,6 +1,6 @@
 // My메뉴 상품별 상세 팝업
 import { useSelector } from 'react-redux';
-import { MyMenuDetailDiv } from './MyStabucksStyle.js';
+import { MyMenuDetailTd } from './MyStabucksStyle.js';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { handleDetail } from '../../store/modules/myStarbucksSlice.js';
@@ -23,8 +23,13 @@ const MyMenuDetail = ({ onToggle, kor }) => {
         nowarm: '데우지 않기',
     };
 
+    // const onDetail = () => {
+    //     dispatch(handleDetail({ cate, kor }));
+    //     navigate(detail);
+    // };
+
     return (
-        <MyMenuDetailDiv>
+        <MyMenuDetailTd className="detail-popup">
             <i onClick={() => onToggle('')} className="xi-close"></i>
             <strong>MY FAVORITE {cate === 1 ? 'DRINK' : cate === 2 ? 'FOOD' : 'GOODS'}</strong>
             <span>{kor}</span>
@@ -67,7 +72,7 @@ const MyMenuDetail = ({ onToggle, kor }) => {
                     </li>
                 </ul>
             </div>
-        </MyMenuDetailDiv>
+        </MyMenuDetailTd>
     );
 };
 
