@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import drinkData from '../../assets/api/drinkData';
 
 const initialState = {
-    user: JSON.parse(localStorage.getItem('user')) || {},
+    user: localStorage.getItem('user') || {},
     tabMenus: [],
     level: null,
     isShow: {
@@ -88,8 +88,12 @@ export const myStarbucksSlice = createSlice({
                 }
             }
         },
+                addMymenus: (state, action) => {
+            state.user.myMenus.push(action.payload);
+            localStorage.setItem('user', JSON.stringify(state.user));
+        },
     },
 });
 
-export const { setUser, rewards, onToggle, myMenuChange, myMenuDel, updateCardNickname, rechargeCard, handleDetail } = myStarbucksSlice.actions;
+export const { setUser, rewards, onToggle, myMenuChange, myMenuDel, updateCardNickname, rechargeCard, handleDetail ,addMymenus} = myStarbucksSlice.actions;
 export default myStarbucksSlice.reducer;
