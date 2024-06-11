@@ -39,9 +39,9 @@ const Myfood = ({ setContet, content }) => {
         breadNo: foodID,
         kor: "",
         imgurl: "",
-        cata: 1,
+        data: 1,
         option: { ...foodOption },
-        data: "2024-06-10",
+        date: "2024-06-10",
         isChk: false,
       })
     );

@@ -3,34 +3,42 @@ import { FoodForm } from "./FoodStyle";
 import foodThemaSort from "../../../assets/api/foodThemeSort";
 import FoodThemaSort from "./FoodThemaSort";
 
-const FoodThemeInput = ({
+function FoodThemeInput({
   setOnThema,
   setCurrentThema,
   currentThema,
+  setShowNew,
   onThema,
-}) => {
+}) {
   const [showTheme, setShowTheme] = useState(true);
+  const [showInput, setShowInput] = useState(true);
+  const [buttonInput, setButtonInput] = useState(true);
 
   const changeButton = () => {
-    setOnThema(!showTheme);
-    setSelectShow((selectShow) => !selectShow);
+    setButtonInput(!buttonInput);
+    setOnThema((onThema) => !onThema);
+    setShowNew({
+      new: false,
+      season: false,
+      theme: "",
+    });
   };
 
   return (
     <FoodForm>
       <div className="top">
         <h2>분류보기</h2>
-        <p onClick={() => setShowTheme(!showTheme)}>
+        <p onClick={() => setShowInput(!showInput)}>
           <i className="xi-angle-up"></i>
         </p>
       </div>
-      {showTheme && (
+      {showInput && (
         <>
           <div className="btn">
-            <button className={showTheme ? "on" : ""} onClick={changeButton}>
+            <button className={onThema ? "" : "on"} onClick={changeButton}>
               카테고리
             </button>
-            <button className={showTheme ? "" : "on"} onClick={changeButton}>
+            <button className={onThema ? "on" : ""} onClick={changeButton}>
               테마
             </button>
           </div>
@@ -48,6 +56,6 @@ const FoodThemeInput = ({
       )}
     </FoodForm>
   );
-};
+}
 
 export default FoodThemeInput;

@@ -28,6 +28,7 @@ const FoodForm = () => {
   const [showNew, setShowNew] = useState({
     new: false,
     season: false,
+    theme: "",
   });
 
   //data 추출
@@ -37,6 +38,7 @@ const FoodForm = () => {
   const filterNewData = newfoodData.filter((item2) => item2.icon === "new");
   const [onThema, setOnThema] = useState(false);
   const [currentThema, setCurrentThema] = useState("summer");
+  const [selectShow, setSelectShow] = useState(true);
 
   return (
     <FoodWrap>
@@ -48,8 +50,16 @@ const FoodForm = () => {
               setOnThema={setOnThema}
               setCurrentThema={setCurrentThema}
               currentThema={currentThema}
+              onThema={onThema}
+              setShowNew={setShowNew}
             />
-            <FoodThemeList currentThema={currentThema} />
+            <FoodThemeList
+              currentThema={currentThema}
+              setShowNew={setShowNew}
+              showNew={showNew}
+              onThema={onThema}
+              isCheckCategory={isCheckCategory}
+            />
           </>
         ) : (
           <>

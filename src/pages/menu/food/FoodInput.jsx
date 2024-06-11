@@ -10,6 +10,11 @@ const FoodInput = ({
   const [showInput, setShowInput] = useState(true);
   const onClickBtn = () => {
     setOnThema(!onThema);
+    setShowNew({
+      new: false,
+      season: false,
+      theme: "",
+    });
   };
 
   return (
@@ -24,8 +29,12 @@ const FoodInput = ({
       {showInput && (
         <>
           <div className="btn">
-            <button onClick={onClickBtn}>카테고리</button>
-            <button onClick={onClickBtn}>테마</button>
+            <button onClick={onClickBtn} className={onThema ? "" : "on"}>
+              카테고리
+            </button>
+            <button onClick={onClickBtn} className={onThema ? "on" : ""}>
+              테마
+            </button>
           </div>
           <div>
             <div className="checkbox">

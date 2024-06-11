@@ -78,7 +78,8 @@ export const FoodForm = styled.div`
       height: 35px;
       border-radius: 5px;
       border: none;
-      &:first-child {
+      margin-right: 30px;
+      &.on {
         background: #006633;
         color: #fff;
         margin-right: 30px;
