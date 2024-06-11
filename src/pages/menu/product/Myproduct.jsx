@@ -3,12 +3,13 @@ import data from "../../../assets/api/productData";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addMymenus } from "../../../store/modules/myStarbucksSlice";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from 'react';
+import { signUpDate } from '../../../store/modules/authSlice';
 
 const Myproduct = ({ setContet, content }) => {
   const dispatch = useDispatch();
   const { productID, category } = useParams();
-  const { user } = useSelector((state) => state.authR);
+  const { user,currentDate } = useSelector((state) => state.authR);
   const { myMenus } = user;
   const [productOption, setProductOption] = useState({});
   const idRef = useRef(user.myMenus ? user.myMenus.length + 1 : 0);
@@ -27,6 +28,10 @@ const Myproduct = ({ setContet, content }) => {
     });
   };
 
+      useEffect(() => {
+        dispatch(signUpDate());
+    }, []);
+
   const onSaveBtn = (e) => {
     e.preventDefault();
     dispatch(
@@ -35,7 +40,7 @@ const Myproduct = ({ setContet, content }) => {
         goodsNo: productID,
         cate: 3,
         kor: thisProduct.kor,
-        date: "2024-06-10",
+        date: currentDate,
         isChk: false,
         imgurl: thisProduct.imgurl,
       })
