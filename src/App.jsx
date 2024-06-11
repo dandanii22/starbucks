@@ -21,6 +21,7 @@ import BeforeLogin from './pages/login/BeforeLogin';
 import NoticeDetail from './components/notice/NoticeDetail';
 
 import ScrollToTop from './components/ScrollToTop';
+import MyCart from "./pages/mycart/MyCart";
 
 function App() {
   return (
