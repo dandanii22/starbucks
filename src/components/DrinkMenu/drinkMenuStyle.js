@@ -77,6 +77,20 @@ export const DrinkSortContent = styled.div`
         }
       }
     }
+    .themaUl {
+      margin-top: 20px;
+      li {
+        p {
+          border: 2px solid #006633;
+          width: 335px;
+          height: 90px;
+          img {
+            width: 335px;
+            height: 90px;
+          }
+        }
+      }
+    }
   }
 
   .drinkSort {
@@ -96,6 +110,12 @@ export const DrinkSortContent = styled.div`
       text-indent: 13px;
       font-size: 14px;
       background-color: #fff;
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+      &:nth-of-type(3) {
+        opacity: 0;
+      }
       input[type="checkbox"] {
         display: none;
       }
@@ -117,6 +137,7 @@ export const DrinkSortContent = styled.div`
       &:nth-of-type(1) {
         background-repeat: no-repeat;
         background-image: url("../../public/images/drink/sbox_arrow_down.png");
+
         background-position: 226px 15px;
       }
       &:nth-of-type(2) {
@@ -147,6 +168,16 @@ export const DrinkSortContent = styled.div`
           background-size: cover;
           vertical-align: middle;
           margin-right: 2px;
+        }
+      }
+    }
+    &.on {
+      li {
+        &:nth-of-type(2) {
+          opacity: 1;
+        }
+        &:nth-of-type(3) {
+          opacity: 1;
         }
       }
     }

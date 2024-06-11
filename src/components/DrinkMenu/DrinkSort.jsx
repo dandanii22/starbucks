@@ -8,7 +8,7 @@ import {
   changeShow,
 } from "../../store/modules/drinkMenuSlice";
 
-const DrinkSort = () => {
+const DrinkSort = ({ goThema, setGoThema }) => {
   const dispatch = useDispatch();
   const { drinkSortData, isAllShow, isNewShow, isSeasonalShow } = useSelector(
     (state) => state.drinkMenu
@@ -17,6 +17,7 @@ const DrinkSort = () => {
   const changeSort = () => {
     setIsSort(!isSort);
   };
+  const [sortOpen, setSortOpen] = useState(false);
   return (
     <DrinkSortContent>
       <div className="sortContent">
@@ -28,7 +29,14 @@ const DrinkSort = () => {
           <>
             <ul className="drinkCategory">
               <li className="category on">카테고리</li>
-              <li className="category">테마</li>
+              <li
+                className="category"
+                onClick={() => {
+                  setGoThema(true);
+                }}
+              >
+                테마
+              </li>
             </ul>
             <ul className="checkboxUl">
               <li>
@@ -56,8 +64,14 @@ const DrinkSort = () => {
           </>
         ) : null}
       </div>
-      <ul className="drinkSort">
-        <li>상세분류</li>
+      <ul className={sortOpen ? "drinkSort on" : "drinkSort"}>
+        <li
+          onClick={() => {
+            setSortOpen(!sortOpen);
+          }}
+        >
+          상세분류
+        </li>
         <li>
           <input type="checkbox" name="newMenu" checked={isNewShow} />
           <label
