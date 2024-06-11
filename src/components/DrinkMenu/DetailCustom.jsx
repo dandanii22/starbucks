@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { CustomContent } from './drinkMenuStyle';
 import { useDispatch, useSelector } from 'react-redux';
 import { addMymenus } from '../../store/modules/myStarbucksSlice';
+import { signUpDate } from '../../store/modules/authSlice';
 const DetailCustom = ({ cgData, setCustomOn }) => {
-    const { user } = useSelector((state) => state.authR);
+    const { user, currentDate  } = useSelector((state) => state.authR);
     const dispatch = useDispatch();
     const { id, imgurl, kor } = cgData;
     const idRef = useRef(user.myMenus ? user.myMenus.length + 1 : 0);
@@ -22,6 +23,9 @@ const DetailCustom = ({ cgData, setCustomOn }) => {
         if (syrupNum === 0) return;
         setSyrupNum(shotNum - 1);
     };
+    useEffect(() => {
+        dispatch(signUpDate());
+    }, []);
     const onSubmit = (e) => {
         e.preventDefault();
         dispatch(
@@ -38,7 +42,7 @@ const DetailCustom = ({ cgData, setCustomOn }) => {
                     drizzle: drizzle,
                     whip: whip,
                 },
-                date: '2024-06-10',
+               date: currentDate,
                 isChk: false,
             })
         );
