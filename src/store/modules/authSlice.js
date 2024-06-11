@@ -118,7 +118,11 @@ export const authSlice = createSlice({
         logout: (state, action) => {
             if (state.user) {
                 // logData에서 현재 사용자 정보를 찾아 업데이트
-                const updatedLogData = state.logData.map((item) => (item.id === state.user.id ? { ...item, ...state.user } : item));
+                const updatedLogData = state.logData.map((item) =>
+                    item.id === state.user.id
+                        ? { ...item, ...JSON.parse(localStorage.getItem('user')) }
+                        : item
+                );
                 // 로컬스토리지에 업데이트된 logData 저장
                 localStorage.setItem('logData', JSON.stringify(updatedLogData));
                 state.logData = updatedLogData;
