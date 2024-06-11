@@ -61,6 +61,9 @@ function App() {
                 element={<ProductDetail />}
               />
             </Route>
+               <Route>
+              <Route path="/myCart" element={<MyCart />} />
+            </Route>
           </Route>
         </Routes>
       </Router>
