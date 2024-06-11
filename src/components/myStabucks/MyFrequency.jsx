@@ -8,8 +8,6 @@ import { onToggle } from '../../store/modules/myStarbucksSlice.js';
 
 const MyFrequency = () => {
     const dispatch = useDispatch();
-    // const { user } = useSelector((state) => state.authR);
-    // const { isShow } = useSelector((state) => state.myStar);
     const { user, isShow } = useSelector((state) => state.myStar);
     const {
         nickName,

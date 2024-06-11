@@ -15,8 +15,6 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { onToggle, rechargeCard, updateCardNickname } from '../../store/modules/myStarbucksSlice.js';
 
 const MyCard = () => {
-    // const { user } = useSelector((state) => state.authR);
-    // const { isShow } = useSelector((state) => state.myStar);
     const { user, isShow } = useSelector((state) => state.myStar);
     const { myCard } = user;
 

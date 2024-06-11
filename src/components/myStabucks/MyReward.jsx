@@ -5,8 +5,6 @@ import { useEffect } from 'react';
 import { onToggle, rewards } from '../../store/modules/myStarbucksSlice.js';
 
 const MyReward = () => {
-    // const { user } = useSelector((state) => state.authR);
-    // const { level, isShow } = useSelector((state) => state.myStar);
     const { user, level, isShow } = useSelector((state) => state.myStar);
 
     const dispatch = useDispatch();
