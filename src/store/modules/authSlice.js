@@ -80,7 +80,7 @@ const initialState = {
                           option: {},
                           date: '2024-06-01',
                           isChk: false,
-                          imgurl: './images/product/Mug2.jpg',
+                          imgurl: './images/product/mug/Mug2.jpg',
                       },
                   ],
               },
