@@ -5,7 +5,7 @@ import data from "../../../assets/api/foodData";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Myfood from "./Myfood";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const FoodDetail = () => {
   const { foodID, category } = useParams();

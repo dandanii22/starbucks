@@ -5,10 +5,12 @@ import data from "../../../assets/api/productData";
 import { useState } from "react";
 import Myproduct from "./Myproduct";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const ProductDetail = () => {
   const { productID, category } = useParams();
   const [content, setContet] = useState(false);
+  const { authed } = useSelector((state) => state.authR);
   const navigate = useNavigate();
   const onGo = () => {
     navigate("/product");
