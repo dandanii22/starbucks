@@ -37,7 +37,7 @@ const MyFrequency = () => {
                 </OverlayWrap>
             )}
             <strong className="acd-name">
-                My e - 프리퀀시<i className="xi-angle-up" onClick={() => dispatch(onToggle({ key: 'isShow' }))}></i>
+                My e - 프리퀀시<i className="xi-angle-up" onClick={() => dispatch(onToggle({ key: 'isFre' }))}></i>
             </strong>
             <div className="acd-in">
                 <div className={`frequency ${hours >= 18 || hours < 6 ? 'black' : ''}`}>
