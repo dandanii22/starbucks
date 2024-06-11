@@ -96,7 +96,7 @@ const FoodInput = ({
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk3"
                   name="sandwich"
                   checked={isCheckCategory.sandwich}
                   onChange={(e) =>
@@ -112,7 +112,7 @@ const FoodInput = ({
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk4"
                   name="soup"
                   checked={isCheckCategory.soup}
                   onChange={(e) =>
@@ -123,12 +123,12 @@ const FoodInput = ({
                     })
                   }
                 />
-                <label htmlFor="chk3">따뜻한 푸드</label>
+                <label htmlFor="chk4">따뜻한 푸드</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk4"
+                  id="chk5"
                   name="fruit"
                   checked={isCheckCategory.fruit}
                   onChange={(e) =>
@@ -139,12 +139,12 @@ const FoodInput = ({
                     })
                   }
                 />
-                <label htmlFor="chk4">과일 & 요거트</label>
+                <label htmlFor="chk5">과일 & 요거트</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk5"
+                  id="chk6"
                   name="snack"
                   checked={isCheckCategory.snack}
                   onChange={(e) =>
@@ -155,12 +155,12 @@ const FoodInput = ({
                     })
                   }
                 />
-                <label htmlFor="chk5">스낵 & 미니 디저트</label>
+                <label htmlFor="chk6">스낵 & 미니 디저트</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk6"
+                  id="chk7"
                   name="icecream"
                   checked={isCheckCategory.icecream}
                   onChange={(e) =>
@@ -171,7 +171,7 @@ const FoodInput = ({
                     })
                   }
                 />
-                <label htmlFor="chk6">아이스크림</label>
+                <label htmlFor="chk7">아이스크림</label>
               </p>
             </div>
           </div>
