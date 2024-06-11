@@ -77,7 +77,9 @@ const ProductDetail = () => {
           {imgData.map(
             (data2, idx) =>
               idx < 5 && (
-                <Link to={`/${category}/${data2.replace(/[^0-9]/gi, "")}`}>
+                <Link
+                  to={`/product/${category}/${data2.replace(/[^0-9]/gi, "")}`}
+                >
                   <li>
                     <img src={data2} />
                   </li>
