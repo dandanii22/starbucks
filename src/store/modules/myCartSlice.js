@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { onToggle } from "../../../../09_react/day15_project2/src/store/modules/cartSlice";
 
 const initialState = {
   cart: [],
