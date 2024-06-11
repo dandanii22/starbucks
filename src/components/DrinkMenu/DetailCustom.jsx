@@ -42,7 +42,6 @@ const DetailCustom = ({ cgData, setCustomOn }) => {
                 isChk: false,
             })
         );
-        alert('등록이 완료되었습니다.');
         setCustomOn(false);
     };
     return (
