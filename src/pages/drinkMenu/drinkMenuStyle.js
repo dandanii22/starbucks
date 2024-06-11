@@ -8,3 +8,21 @@ export const DrinkMenuWrap = styled.div`
     box-sizing: border-box;
   }
 `;
+
+export const SubVisualWrap = styled.div`
+  height: 405px;
+  background-image: url("../../public/images/drink/coffeeVisual.png");
+  background-repeat: no-repeat;
+  background-position: 0, 0;
+  background-size: cover;
+  text-align: center;
+  margin-bottom: 5%;
+
+  h2 {
+    padding-top: 7%;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 2px gray;
+  }
+`;
