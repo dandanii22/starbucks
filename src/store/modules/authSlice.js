@@ -47,13 +47,7 @@ const initialState = {
               drinkNo: 1,
               cate: 1,
               kor: "씨솔트 카라멜 콜드 브루",
-              option: {
-                size: "Tall",
-                shot: 1,
-                syrup: 1,
-                drizzle: "선택 안 함",
-                whip: "추가",
-              },
+              option: "퍼스널 옵션",
               date: "2024-06-01",
               isChk: false,
               imgurl: "./images/drink/coldbrew/coldbrew01.jpg",
@@ -63,13 +57,7 @@ const initialState = {
               drinkNo: 2,
               cate: 1,
               kor: "나이트로 바닐라 크림",
-              option: {
-                size: "Venti",
-                shot: 2,
-                syrup: 2,
-                drizzle: "선택 안 함",
-                whip: "추가",
-              },
+              option: "퍼스널 옵션",
               date: "2024-06-01",
               isChk: false,
               imgurl: "./images/drink/coldbrew/coldbrew02.jpg",
@@ -79,7 +67,7 @@ const initialState = {
               foodNo: 1,
               cate: 2,
               kor: "소시지 프레첼 소금빵",
-              option: { warm: "따뜻하게 데움" },
+              option: "퍼스널 옵션",
               date: "2024-06-01",
               isChk: false,
               imgurl: "./images/food/bread/bread03.jpg",
@@ -89,7 +77,7 @@ const initialState = {
               goodsNo: 1,
               cate: 3,
               kor: "SS 리저브 블랙 DW 머그 355ml",
-              option: {},
+              option: "퍼스널 옵션",
               date: "2024-06-01",
               isChk: false,
               imgurl: "./images/product/Mug2.jpg",
@@ -186,7 +174,6 @@ export const authSlice = createSlice({
     },
     addMymenus: (state, action) => {
       state.user.myMenus.push(action.payload);
-      localStorage.setItem("user", JSON.stringify(state.user));
     },
   },
 });
