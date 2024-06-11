@@ -55,7 +55,6 @@ const Myfood = ({ setContet, content }) => {
         <div className="myselect">
           <h3>추가옵션</h3>
           <select name="" id="" onChange={(e) => onChangeOption(e)}>
-            <option value="none">선택안함</option>
             <option value="warm">따뜻하게 데움</option>
             <option value="notwarm">데우지 않음</option>
           </select>
