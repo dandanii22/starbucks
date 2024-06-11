@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -101,7 +101,8 @@ const GlobalStyle = createGlobalStyle`
         url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff2') format('woff2'),
         url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.woff') format('woff'),
         url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Black.ttf') format("truetype");
-    font-display: swap;}
+    font-display: swap;
+}
 
   body {
     font-size: 16px;
@@ -109,9 +110,14 @@ const GlobalStyle = createGlobalStyle`
     /* font-family: 'Noto Sans KR', sans-serif; */
     font-family: 'Pretendard', sans-serif;
     color:#333;
-  }
-  a {
-    text-decoration: none;
+    }
+    button {
+
+        font-family: 'Pretendard', sans-serif;
+    }
+    a {
+        text-decoration: none;
+        font-family: 'Pretendard', sans-serif;
     color:#333; 
   }
   li { list-style:none }
