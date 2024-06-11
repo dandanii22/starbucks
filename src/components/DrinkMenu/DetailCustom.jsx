@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { CustomContent } from './drinkMenuStyle';
 import { useDispatch, useSelector } from 'react-redux';
 import { addMymenus } from '../../store/modules/authSlice';
-
 const DetailCustom = ({ cgData, setCustomOn }) => {
     const { user } = useSelector((state) => state.authR);
     const dispatch = useDispatch();
@@ -146,5 +145,4 @@ const DetailCustom = ({ cgData, setCustomOn }) => {
         </CustomContent>
     );
 };
-
 export default DetailCustom;
