@@ -67,7 +67,6 @@ const FoodDetail = () => {
                 <i className="xi-heart-o" />
               )}
             </button>
-            <button>장바구니 담기</button>
           </p>
         </div>
       </div>

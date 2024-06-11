@@ -278,14 +278,11 @@ export const Detail = styled.div`
       .btn {
         display: flex;
         button {
-          width: 372px;
+          width: 768px;
           height: 40px;
           background: none;
           border-radius: 5px;
           border: 1px solid #9e9e9e;
-          &:first-child {
-            margin-right: 25px;
-          }
         }
       }
     }
