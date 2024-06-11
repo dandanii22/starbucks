@@ -23,11 +23,6 @@ const MyMenuDetail = ({ onToggle, kor }) => {
         nowarm: '데우지 않기',
     };
 
-    const onDetail = () => {
-        dispatch(handleDetail({ cate, kor }));
-        navigate(detail);
-    };
-
     return (
         <MyMenuDetailDiv>
             <i onClick={() => onToggle('')} className="xi-close"></i>
@@ -61,7 +56,14 @@ const MyMenuDetail = ({ onToggle, kor }) => {
                         <span>{''}</span>
                     </li> */}
                     <li>
-                        <button onClick={() => onDetail()}>{cate === 1 ? '음료' : cate === 2 ? '푸드' : '상품'} 정보</button>
+                        <button
+                            onClick={() => {
+                                dispatch(handleDetail({ cate, kor }));
+                                navigate(detail);
+                            }}
+                        >
+                            {cate === 1 ? '음료' : cate === 2 ? '푸드' : '상품'} 정보
+                        </button>
                     </li>
                 </ul>
             </div>
