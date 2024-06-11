@@ -3,11 +3,12 @@ import data from "../../../assets/api/foodData";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addMymenus } from "../../../store/modules/myStarbucksSlice";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
+import { signUpDate } from '../../../store/modules/authSlice';
 
 const Myfood = ({ setContet, content }) => {
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.authR);
+  const { user,currentDate } = useSelector((state) => state.authR);
   const { foodID, category } = useParams();
   const { myMenus } = user;
   const [foodOption, setFoodOption] = useState({ warm: "따뜻하게 데움" });
@@ -32,6 +33,10 @@ const Myfood = ({ setContet, content }) => {
     }
   };
 
+   useEffect(() => {
+        dispatch(signUpDate());
+    }, []);
+
   const onSaveBtn = (e) => {
     e.preventDefault();
     dispatch(
@@ -41,7 +46,7 @@ const Myfood = ({ setContet, content }) => {
         cate: 2,
         kor: thisFood.kor,
         option: { ...foodOption },
-        date: "2024-06-10",
+     date: currentDate,
         isChk: false,
         imgurl: thisFood.imgurl,
       })
