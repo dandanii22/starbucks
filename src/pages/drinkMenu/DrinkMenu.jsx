@@ -1,14 +1,13 @@
-import DrinkSort from "../../components/DrinkMenu/DrinkSort";
 import { DrinkMenuWrap } from "./drinkMenuStyle";
-import { useState } from "react";
-import DrinkMain from "../../components/DrinkMenu/DrinkMain";
+import DrinkSubVisual from "../../components/DrinkSubVisual";
+import DrinkInner from "../../components/DrinkMenu/DrinkInner";
 
 const DrinkMenu = () => {
   return (
     <DrinkMenuWrap>
+      <DrinkSubVisual />
       <div className="inner">
-        <DrinkSort />
-        <DrinkMain />
+        <DrinkInner />
       </div>
     </DrinkMenuWrap>
   );
