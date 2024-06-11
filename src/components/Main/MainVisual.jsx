@@ -1,12 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import { Visual } from './MainConStyles';
 
 const MainVisual = () => {
+    const navigate = useNavigate();
     return (
         <Visual className="mainVisual">
             <div className="imgText">
                 <img src="./images/main/VisualText.png" alt="Light up Your Summer" />
                 <p>
-                    <button>자세히 보기</button>
+                    <button onClick={()=>navigate('/drinkMenu')}>자세히 보기</button>
                 </p>
             </div>
             <div className="imgArea">
