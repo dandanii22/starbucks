@@ -48,12 +48,7 @@ const MyMenuList = () => {
                 <thead>
                     <tr>
                         <td>
-                            <input
-                                type="checkbox"
-                                name="all"
-                                onChange={changeInput}
-                                checked={chkData.length > 0 && chkData.filter((chk) => chk.isChk !== true).length < 1}
-                            />
+                            <input type="checkbox" name="all" onChange={changeInput} checked={chkData.length > 0 && chkData.filter((chk) => chk.isChk !== true).length < 1} />
                         </td>
                         <td>NO</td>
                         <td>음료명</td>
@@ -66,7 +61,9 @@ const MyMenuList = () => {
                 ) : (
                     <tbody>
                         <tr>
-                            <td colSpan={5}>데이터가 없습니다.</td>
+                            <td style={{ lineHeight: '66px' }} colSpan={5}>
+                                데이터가 없습니다.
+                            </td>
                         </tr>
                     </tbody>
                 )}
