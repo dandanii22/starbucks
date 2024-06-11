@@ -59,7 +59,7 @@ const MyMenuList = () => {
                 ) : (
                     <tbody>
                         <tr>
-                            <td style={{ lineHeight: '66px' }} colSpan={5}>
+                            <td style={{ lineHeight: '66px', borderBottom: '1px solid #aaa' }} colSpan={5}>
                                 데이터가 없습니다.
                             </td>
                         </tr>
