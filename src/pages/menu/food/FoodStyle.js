@@ -413,12 +413,13 @@ export const FoodListUl = styled.ul`
       overflow: hidden;
       width: 270px;
       height: 270px;
+      margin-bottom: 10px;
 
       img {
         width: 270px;
         height: 270px;
         transition: 1s;
-        margin-bottom: 10px;
+
         &:hover {
           transform: scale(1.1);
         }

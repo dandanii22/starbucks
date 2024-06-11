@@ -38,7 +38,6 @@ const FoodForm = () => {
   const filterNewData = newfoodData.filter((item2) => item2.icon === "new");
   const [onThema, setOnThema] = useState(false);
   const [currentThema, setCurrentThema] = useState("summer");
-  const [selectShow, setSelectShow] = useState(true);
 
   return (
     <FoodWrap>

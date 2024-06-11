@@ -30,7 +30,7 @@ export const ProductWrap = styled.div`
       position: absolute;
       right: 0;
       top: 40px;
-      z-index: 10;
+      z-index: 1000;
     }
 
     .product {
@@ -79,7 +79,8 @@ export const ProductForm = styled.div`
       height: 35px;
       border-radius: 5px;
       border: none;
-      &:first-child {
+      margin-right: 30px;
+      &.on {
         background: #006633;
         color: #fff;
         margin-right: 30px;
@@ -93,13 +94,28 @@ export const ProductForm = styled.div`
     margin-bottom: 30px;
 
     p {
-      margin-right: 25px;
+      margin-right: 30px;
       display: flex;
       align-items: center;
+      position: relative;
 
+      input[type="checkbox"] {
+        display: none;
+      }
       label {
-        display: block;
-        font-size: 14px;
+        position: relative;
+        cursor: pointer;
+        padding-left: 21px;
+        background-repeat: no-repeat;
+        background-position: 0 35%;
+        background-image: url("../../public/images/drink/ck_icon.jpg");
+      }
+      input[type="checkbox"]:checked + label {
+        cursor: pointer;
+        padding-left: 21px;
+        background-repeat: no-repeat;
+        background-position: 0 35%;
+        background-image: url("../../public/images/drink/ck_icon_on.jpg");
       }
     }
   }
@@ -361,6 +377,105 @@ export const ProductChoice = styled.form`
       }
       &:last-child {
         background: #000;
+      }
+    }
+  }
+`;
+
+export const ProductThemaForm = styled.div`
+  border: 1px solid #999;
+  border-radius: 10px;
+  width: 1520px;
+  position: relative;
+
+  .top {
+    display: flex;
+    align-items: center;
+    margin: 18px 30px;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    p {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #efefef;
+      text-align: center;
+      line-height: 45px;
+      i {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+  .btn {
+    margin: 25px 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-top: 1px solid #999;
+    width: 1458px;
+    padding-top: 30px;
+
+    button {
+      width: 200px;
+      height: 35px;
+      border-radius: 5px;
+      margin-right: 30px;
+      border: none;
+      &.on {
+        background: #006633;
+        color: #fff;
+        margin-right: 30px;
+      }
+    }
+  }
+  .themaSort {
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      width: 335px;
+      height: 90px;
+      &:nth-of-type(1) {
+        margin-bottom: 20px;
+      }
+      /* &.on {
+        border: 2px solid #006633;
+      } */
+      p {
+      }
+    }
+  }
+`;
+
+export const ProductUl = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  width: 1700px;
+  margin-top: 50px;
+  li {
+    margin-right: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    .lidiv {
+      overflow: hidden;
+      width: 270px;
+      height: 270px;
+
+      img {
+        width: 270px;
+        height: 270px;
+        transition: 1s;
+        margin-bottom: 10px;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

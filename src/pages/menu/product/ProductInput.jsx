@@ -1,8 +1,22 @@
 import { useState } from "react";
 import { ProductForm } from "./ProductStyle";
 
-const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
+const ProductInput = ({
+  setIsCheckCategory,
+  isCheckCategory,
+  setOnThema,
+  onThema,
+}) => {
   const [showInput, setShowInput] = useState(true);
+
+  const onClickBtn = () => {
+    setOnThema(!onThema);
+    setShowNew({
+      new: false,
+      season: false,
+      theme: "",
+    });
+  };
 
   return (
     <ProductForm>
@@ -16,8 +30,12 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
       {showInput && (
         <>
           <div className="btn">
-            <button>카테고리</button>
-            <button>테마</button>
+            <button onClick={onClickBtn} className={onThema ? "" : "on"}>
+              카테고리
+            </button>
+            <button onClick={onClickBtn} className={onThema ? "on" : ""}>
+              테마
+            </button>
           </div>
           <div>
             <div className="checkbox">
@@ -48,7 +66,7 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                 <input
                   type="checkbox"
                   name="mug"
-                  id="chk"
+                  id="chk1"
                   checked={isCheckCategory.mug}
                   onChange={(e) => {
                     setIsCheckCategory({
@@ -58,12 +76,12 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                     });
                   }}
                 />
-                <label htmlFor="chk">머그</label>
+                <label htmlFor="chk1">머그</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk2"
                   name="glass"
                   checked={isCheckCategory.glass}
                   onChange={(e) =>
@@ -74,12 +92,12 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                     })
                   }
                 />
-                <label htmlFor="chk">글라스</label>
+                <label htmlFor="chk2">글라스</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk3"
                   name="plastic"
                   checked={isCheckCategory.plastic}
                   onChange={(e) =>
@@ -90,12 +108,12 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                     })
                   }
                 />
-                <label htmlFor="chk">플라스틱 텀블러</label>
+                <label htmlFor="chk3">플라스틱 텀블러</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk4"
                   name="stainless"
                   checked={isCheckCategory.stainless}
                   onChange={(e) =>
@@ -106,12 +124,12 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                     })
                   }
                 />
-                <label htmlFor="chk">스테인리스 텀블러</label>
+                <label htmlFor="chk4">스테인리스 텀블러</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk5"
                   name="flask"
                   checked={isCheckCategory.flask}
                   onChange={(e) =>
@@ -122,12 +140,12 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                     })
                   }
                 />
-                <label htmlFor="chk">보온병</label>
+                <label htmlFor="chk5">보온병</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk6"
                   name="accessory"
                   checked={isCheckCategory.accessory}
                   onChange={(e) =>
@@ -138,12 +156,12 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                     })
                   }
                 />
-                <label htmlFor="">액세서리</label>
+                <label htmlFor="chk6">액세서리</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk7"
                   name="setproduct"
                   checked={isCheckCategory.setproduct}
                   onChange={(e) =>
@@ -154,12 +172,12 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                     })
                   }
                 />
-                <label htmlFor="chk">선물세트</label>
+                <label htmlFor="chk7">선물세트</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk8"
                   name="tea"
                   checked={isCheckCategory.tea}
                   onChange={(e) =>
@@ -170,7 +188,7 @@ const ProductInput = ({ setIsCheckCategory, isCheckCategory }) => {
                     })
                   }
                 />
-                <label htmlFor="chk">패키지 티</label>
+                <label htmlFor="chk8">패키지 티</label>
               </p>
             </div>
           </div>

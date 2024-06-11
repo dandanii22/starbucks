@@ -10,9 +10,12 @@ import Flask from "./Flask";
 import Accessory from "./Accessory";
 import Setproduct from "./Setproduct";
 import ProductInput from "./ProductInput";
+import ProductThemaInput from "./ProductThemaInput";
 import ProductSelect from "./ProductSelect";
 import Tea from "./Tea";
 import CategoryProduct from "./CategoryProduct";
+import ProductThemaList from "./ProductThemaList";
+import productThemaSort from "../../../assets/api/productThemaSort";
 const ProductForm = () => {
   const [isCheckCategory, setIsCheckCategory] = useState({
     all: true,
@@ -39,38 +42,63 @@ const ProductForm = () => {
   const newData = (e) => {
     setShowNew(e.target.checked);
   };
+  const [onThema, setOnThema] = useState(false);
+  const [currentThema, setCurrentThema] = useState("summer");
   return (
     <ProductWrap>
       <SubVisual />
       <div className="inner">
-        <ProductInput
-          setIsCheckCategory={setIsCheckCategory}
-          isCheckCategory={isCheckCategory}
-        />
-        <div className="productmenu">
-          <div className="select">
-            <ProductSelect showNew={showNew} setShowNew={setShowNew} />
-          </div>
+        {onThema ? (
+          <>
+            <ProductThemaInput
+              setOnThema={setOnThema}
+              setCurrentThema={setCurrentThema}
+              currentThema={currentThema}
+              onThema={onThema}
+              setShowNew={setShowNew}
+            />
+            <ProductThemaList currentThema={currentThema} />
+          </>
+        ) : (
+          <>
+            <ProductInput
+              setIsCheckCategory={setIsCheckCategory}
+              isCheckCategory={isCheckCategory}
+              setOnThema={setOnThema}
+              onThema={onThema}
+            />
+            <div className="productmenu">
+              <div className="select">
+                <ProductSelect showNew={showNew} setShowNew={setShowNew} />
+              </div>
 
-          <div className="product">
-            {isCheckCategory.all ? (
-              <>
-                <CategoryProduct showNew={showNew} />
-              </>
-            ) : (
-              <>
-                {isCheckCategory.mug && <Mug showNew={showNew} />}
-                {isCheckCategory.glass && <Glass showNew={showNew} />}
-                {isCheckCategory.plastic && <Plastic showNew={showNew} />}
-                {isCheckCategory.stainless && <Stainless showNew={showNew} />}
-                {isCheckCategory.flask && <Flask showNew={showNew} />}
-                {isCheckCategory.accessory && <Accessory showNew={showNew} />}
-                {isCheckCategory.setproduct && <Setproduct showNew={showNew} />}
-                {isCheckCategory.tea && <Tea showNew={showNew} />}
-              </>
-            )}
-          </div>
-        </div>
+              <div className="product">
+                {isCheckCategory.all ? (
+                  <>
+                    <CategoryProduct showNew={showNew} />
+                  </>
+                ) : (
+                  <>
+                    {isCheckCategory.mug && <Mug showNew={showNew} />}
+                    {isCheckCategory.glass && <Glass showNew={showNew} />}
+                    {isCheckCategory.plastic && <Plastic showNew={showNew} />}
+                    {isCheckCategory.stainless && (
+                      <Stainless showNew={showNew} />
+                    )}
+                    {isCheckCategory.flask && <Flask showNew={showNew} />}
+                    {isCheckCategory.accessory && (
+                      <Accessory showNew={showNew} />
+                    )}
+                    {isCheckCategory.setproduct && (
+                      <Setproduct showNew={showNew} />
+                    )}
+                    {isCheckCategory.tea && <Tea showNew={showNew} />}
+                  </>
+                )}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </ProductWrap>
   );
