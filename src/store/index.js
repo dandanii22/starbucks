@@ -3,6 +3,7 @@ import authReducer from '../store/modules/authSlice';
 import myStar from './modules/myStarbucksSlice';
 import drinkMenu from "./modules/drinkMenuSlice";
 import noticeR from './modules/noticeSlice';
+import myCart from "./modules/myCartSlice";
 
 export const store = configureStore({
     reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
         drinkMenu,
          noticeR,
           myStar,
+        myCart,
     },
 });
