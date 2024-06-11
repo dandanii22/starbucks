@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { CustomContent } from './drinkMenuStyle';
 import { useDispatch, useSelector } from 'react-redux';
-import { addMymenus } from '../../store/modules/authSlice';
+import { addMymenus } from '../../store/modules/myStarbucksSlice';
 const DetailCustom = ({ cgData, setCustomOn }) => {
     const { user } = useSelector((state) => state.authR);
     const dispatch = useDispatch();
     const { id, imgurl, kor } = cgData;
-    const idRef = useRef(user.myMenus.length + 1);
+    const idRef = useRef(user.myMenus ? user.myMenus.length + 1 : 0);
     const [shotNum, setShotNum] = useState(1);
     const [syrupNum, setSyrupNum] = useState(1);
     const [size, setSize] = useState('Tall');
