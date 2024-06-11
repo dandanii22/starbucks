@@ -44,15 +44,11 @@ const FoodDetail = () => {
   return (
     <Detail>
       <div className="main">
-        <img
-          src={thisFood.imgurl}
-          alt={thisFood.Kortitle}
-          className="mainimg"
-        />
+        <img src={thisFood.imgurl} alt={thisFood.kor} className="mainimg" />
 
         <div className="text">
-          <h2>{thisFood.Kortitle}</h2>
-          <p className="engname">{thisFood.Engtitle}</p>
+          <h2>{thisFood.kor}</h2>
+          <p className="engname">{thisFood.eng}</p>
           <p className="desc">{thisFood.desc}</p>
           <p className="btn">
             <button onClick={() => setContet(!content)}>

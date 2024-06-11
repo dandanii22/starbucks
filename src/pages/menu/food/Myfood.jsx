@@ -36,13 +36,14 @@ const Myfood = ({ setContet, content }) => {
     e.preventDefault();
     dispatch(
       addMymenus({
-        breadNo: foodID,
-        kor: "",
-        imgurl: "",
-        data: 1,
+        id: thisFood.id,
+        foodNo: foodID,
+        cate: 2,
+        kor: thisFood.kor,
         option: { ...foodOption },
         date: "2024-06-10",
         isChk: false,
+        imgurl: thisFood.imgurl,
       })
     );
   };

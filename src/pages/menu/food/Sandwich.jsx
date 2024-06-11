@@ -19,7 +19,7 @@ const Sandwich = ({ showNew }) => {
                             <div className="img">
                               <img src={item2.imgurl}></img>
                             </div>
-                            <p>{item2.Kortitle}</p>
+                            <p>{item2.kor}</p>
                           </li>
                         </Link>
                       );
@@ -36,7 +36,7 @@ const Sandwich = ({ showNew }) => {
                           <div className="img">
                             <img src={item2.imgurl}></img>
                           </div>
-                          <p>{item2.Kortitle}</p>
+                          <p>{item2.kor}</p>
                         </li>
                       </Link>
                     );
