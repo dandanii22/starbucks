@@ -1,6 +1,8 @@
 import { Maincon4Wrap } from './MainConStyles';
+import { useNavigate } from 'react-router-dom';
 
 const Maincon4 = () => {
+    const navigate = useNavigate();
     return (
         <Maincon4Wrap>
             <div className="inner">
@@ -21,7 +23,7 @@ const Maincon4 = () => {
                         있습니다.
                     </p>
                     <p className="more">
-                        <button>자세히 보기</button>
+                        <button onClick={()=>navigate('/drinkMenu')}>자세히 보기</button>
                     </p>
                 </div>
             </div>
