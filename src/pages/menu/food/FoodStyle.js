@@ -76,8 +76,9 @@ export const FoodForm = styled.div`
     button {
       width: 200px;
       height: 35px;
-      border-radius: 5px;
+      border-radius: 3px;
       border: none;
+      color: #222;
       margin-right: 30px;
       &.on {
         background: #006633;
@@ -104,13 +105,28 @@ export const FoodForm = styled.div`
     margin-bottom: 30px;
 
     p {
-      margin-right: 25px;
+      margin-right: 30px;
       display: flex;
       align-items: center;
+      position: relative;
 
+      input[type="checkbox"] {
+        display: none;
+      }
       label {
-        display: block;
-        font-size: 14px;
+        position: relative;
+        cursor: pointer;
+        padding-left: 21px;
+        background-repeat: no-repeat;
+        background-position: 0 35%;
+        background-image: url("../../public/images/drink/ck_icon.jpg");
+      }
+      input[type="checkbox"]:checked + label {
+        cursor: pointer;
+        padding-left: 21px;
+        background-repeat: no-repeat;
+        background-position: 0 35%;
+        background-image: url("../../public/images/drink/ck_icon_on.jpg");
       }
     }
   }

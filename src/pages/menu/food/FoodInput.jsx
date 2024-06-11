@@ -64,7 +64,7 @@ const FoodInput = ({
                 <input
                   type="checkbox"
                   name="bread"
-                  id="chk"
+                  id="chk1"
                   value="bread"
                   checked={isCheckCategory.bread}
                   onChange={(e) => {
@@ -75,12 +75,12 @@ const FoodInput = ({
                     });
                   }}
                 />
-                <label htmlFor="chk">브레드</label>
+                <label htmlFor="chk1">브레드</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk2"
                   name="cake"
                   checked={isCheckCategory.cake}
                   onChange={(e) =>
@@ -91,7 +91,7 @@ const FoodInput = ({
                     })
                   }
                 />
-                <label htmlFor="chk">케이크</label>
+                <label htmlFor="chk2">케이크</label>
               </p>
               <p>
                 <input
@@ -107,7 +107,7 @@ const FoodInput = ({
                     })
                   }
                 />
-                <label htmlFor="chk">샌드위치&샐러드</label>
+                <label htmlFor="chk3">샌드위치&샐러드</label>
               </p>
               <p>
                 <input
@@ -123,12 +123,12 @@ const FoodInput = ({
                     })
                   }
                 />
-                <label htmlFor="chk">따뜻한 푸드</label>
+                <label htmlFor="chk3">따뜻한 푸드</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk4"
                   name="fruit"
                   checked={isCheckCategory.fruit}
                   onChange={(e) =>
@@ -139,12 +139,12 @@ const FoodInput = ({
                     })
                   }
                 />
-                <label htmlFor="chk">과일 & 요거트</label>
+                <label htmlFor="chk4">과일 & 요거트</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk5"
                   name="snack"
                   checked={isCheckCategory.snack}
                   onChange={(e) =>
@@ -155,12 +155,12 @@ const FoodInput = ({
                     })
                   }
                 />
-                <label htmlFor="">스낵 & 미니 디저트</label>
+                <label htmlFor="chk5">스낵 & 미니 디저트</label>
               </p>
               <p>
                 <input
                   type="checkbox"
-                  id="chk"
+                  id="chk6"
                   name="icecream"
                   checked={isCheckCategory.icecream}
                   onChange={(e) =>
@@ -171,7 +171,7 @@ const FoodInput = ({
                     })
                   }
                 />
-                <label htmlFor="chk">아이스크림</label>
+                <label htmlFor="chk6">아이스크림</label>
               </p>
             </div>
           </div>

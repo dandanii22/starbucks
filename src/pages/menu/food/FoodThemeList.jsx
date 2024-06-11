@@ -17,6 +17,7 @@ const FoodThemeList = ({ currentThema, setShowNew, showNew, onThema }) => {
 
   return (
     <FoodListUl>
+      
       {currentThemadata.data.map((item) => (
         <FoodThemeItem key={item.id} item={item} />
       ))}
