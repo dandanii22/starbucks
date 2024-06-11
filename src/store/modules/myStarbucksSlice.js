@@ -1,6 +1,8 @@
 // 2. 비동기 X
 import { createSlice } from '@reduxjs/toolkit';
 import drinkData from '../../assets/api/drinkData';
+import foodData from '../../assets/api/foodData';
+import productData from '../../assets/api/productData';
 
 const initialState = {
     user: localStorage.getItem('user') || {},
@@ -87,13 +89,35 @@ export const myStarbucksSlice = createSlice({
                     }
                 }
             }
+            if (cateNum === 2) {
+                for (const category of foodData) {
+                    const found = category.data.find((drink) => drink.kor === korName);
+                    if (found) {
+                        state.detail = `/food/${category.category}/${found.id}`;
+                    }
+                }
+            }
+            if (cateNum === 3) {
+                for (const category of productData) {
+                    const found = category.data.find((drink) => drink.kor === korName);
+                    if (found) {
+                        state.detail = `/product/${category.category}/${found.id}`;
+                    }
+                }
+            }
         },
-                addMymenus: (state, action) => {
-            state.user.myMenus.push(action.payload);
-            localStorage.setItem('user', JSON.stringify(state.user));
+        addMymenus: (state, action) => {
+            const existingMenu = state.user.myMenus.find((menu) => menu.kor === action.payload.kor);
+            if (existingMenu) {
+                alert('이미 추가하신 메뉴입니다.');
+            } else {
+                state.user.myMenus.push(action.payload);
+                localStorage.setItem('user', JSON.stringify(state.user));
+                alert('등록이 완료되었습니다.');
+            }
         },
     },
 });
 
-export const { setUser, rewards, onToggle, myMenuChange, myMenuDel, updateCardNickname, rechargeCard, handleDetail ,addMymenus} = myStarbucksSlice.actions;
+export const { setUser, rewards, onToggle, myMenuChange, myMenuDel, updateCardNickname, rechargeCard, handleDetail, addMymenus } = myStarbucksSlice.actions;
 export default myStarbucksSlice.reducer;
