@@ -90,11 +90,14 @@ export const FoodForm = styled.div`
   .themaSort {
     display: flex;
     padding: 20px;
-
     li {
-      button {
-        border: none;
-        background: none;
+      width: 335px;
+      height: 90px;
+      &:nth-of-type(1) {
+        margin-bottom: 20px;
+      }
+      &.on {
+        outline: 2px solid #006633;
       }
     }
   }

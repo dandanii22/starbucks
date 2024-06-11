@@ -9,9 +9,9 @@ const FoodThemaSort = ({ item, setCurrentThema, currentThema }) => {
       }}
       className={currentThema === thema ? "on" : ""}
     >
-      <button>
+      <p>
         <img src={imgurl} alt={thema} />
-      </button>
+      </p>
     </FoodSortList>
   );
 };

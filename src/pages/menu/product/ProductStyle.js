@@ -438,16 +438,17 @@ export const ProductThemaForm = styled.div`
     margin-top: 20px;
     margin-bottom: 36px;
     flex-wrap: wrap;
-    justify-content: space-between;
+
     li {
       width: 335px;
       height: 90px;
+      margin-right: 20px;
       &:nth-of-type(1) {
         margin-bottom: 20px;
       }
-      /* &.on {
-        border: 2px solid #006633;
-      } */
+      &.on {
+        outline: 2px solid #006633;
+      }
       p {
       }
     }
