@@ -19,6 +19,7 @@ const NavBar = () => {
     const handleMouseLeave3 = () => setProductOpen(false);
 
     const { authed } = useSelector((state) => state.authR);
+      const { cart } = useSelector((state) => state.myCart);
     return (
         <>
             <NavWarp>
