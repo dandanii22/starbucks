@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import { Maincon5Wrap } from './MainConStyles';
 
 const Maincon5 = () => {
+        const navigate = useNavigate();
     return (
         <Maincon5Wrap>
             <div className="inner">
@@ -18,7 +20,7 @@ const Maincon5 = () => {
                         <span>*사진은 연출된 이미지이므로 실제와 다를 수 있습니다.</span>
                     </p>
                     <p className="more">
-                        <button>자세히 보기</button>
+                        <button onClick={()=>navigate('/food')}>자세히 보기</button>
                     </p>
                 </div>
                 <div className="bgPic">
