@@ -1,12 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import drinkData from "../../assets/api/drinkData";
 import drinkSort from "../../assets/api/drinkSort";
+import drinkThemaData from "../../assets/api/drinkThemaData";
 const initialState = {
   drinkMenuData: drinkData,
   drinkSortData: drinkSort,
+  themaMenuData: drinkThemaData,
   isAllShow: true,
   isNewShow: false,
   isSeasonalShow: false,
+  user: JSON.parse(localStorage.getItem("user")) || {},
 };
 
 export const drinkMenuSlice = createSlice({
