@@ -20,10 +20,13 @@ import MyStabucks from './pages/myStabucks/MyStabucks';
 import BeforeLogin from './pages/login/BeforeLogin';
 import NoticeDetail from './components/notice/NoticeDetail';
 
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   return (
     <>
       <Router>
+             <ScrollToTop />
         <GlobalStyle />
         <Routes>
           <Route path="/" element={<Layout />}>
