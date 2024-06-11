@@ -166,12 +166,9 @@ export const authSlice = createSlice({
         removeKeep: (state, action) => {
             localStorage.removeItem('keepData');
         },
-        addMymenus: (state, action) => {
-            state.user.myMenus.push(action.payload);
-            localStorage.setItem('user', JSON.stringify(state.user));
-        },
+
     },
 });
 
-export const { login, logout, join, signUpDate, keepID, keepChk, removeKeep, addMymenus } = authSlice.actions;
+export const { login, logout, join, signUpDate, keepID, keepChk, removeKeep } = authSlice.actions;
 export default authSlice.reducer;
