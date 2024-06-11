@@ -1,13 +1,18 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { DrinkDetail } from "./drinkMenuStyle";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import DetailCustom from "./DetailCustom";
+import { addCart } from "../../store/modules/myCartSlice";
 
 const DrinkMenuDetail = () => {
+  const { authed } = useSelector((state) => state.authR);
+  const { cart } = useSelector((state) => state.myCart);
+  const cartRef = useRef(cart.length + 1);
   const { drinkID, category } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { drinkMenuData } = useSelector((state) => state.drinkMenu);
   const cg = drinkMenuData.find((drink) => drink.category === category);
   const cgData = cg.data.find((drink) => drink.id === Number(drinkID));
@@ -97,13 +102,30 @@ const DrinkMenuDetail = () => {
               <p className="btn">
                 <button
                   onClick={() => {
-                    setCustomOn(true);
+                    authed
+                      ? setCustomOn(true)
+                      : alert("로그인이 필요한 서비스입니다.");
                   }}
                 >
                   나만의 음료로 등록
                   <span>{customOn ? <FaHeart /> : <FaRegHeart />}</span>
                 </button>
-                <button>장바구니 담기</button>
+                <button
+                  onClick={() => {
+                    authed
+                      ? dispatch(
+                          addCart({
+                            ...cgData,
+                            idx: cartRef.current++,
+                            num: 1,
+                            isChk: false,
+                          })
+                        )
+                      : alert("로그인이 필요한 서비스입니다.");
+                  }}
+                >
+                  장바구니 담기
+                </button>
               </p>
             </div>
           </div>
