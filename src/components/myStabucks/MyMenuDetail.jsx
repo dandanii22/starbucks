@@ -4,15 +4,17 @@ import { MyMenuDetailTd } from './MyStabucksStyle.js';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { handleDetail } from '../../store/modules/myStarbucksSlice.js';
+import { useEffect } from 'react';
 
-const MyMenuDetail = ({ onToggle, kor }) => {
+const MyMenuDetail = ({ onToggle, kor, cate }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { detail } = useSelector((state) => state.myStar);
+    const { detail, prevDetail, detailLoading } = useSelector((state) => state.myStar);
 
     const { tabMenus } = useSelector((state) => state.myStar);
     const matchTab = tabMenus.find((menu) => menu.kor === kor);
-    const { cate, date, imgurl, option } = matchTab;
+
+    const { date, imgurl, option } = matchTab;
     const keyMap = {
         size: '사이즈',
         shot: '샷 추가',
@@ -23,10 +25,12 @@ const MyMenuDetail = ({ onToggle, kor }) => {
         nowarm: '데우지 않기',
     };
 
-    // const onDetail = () => {
-    //     dispatch(handleDetail({ cate, kor }));
-    //     navigate(detail);
-    // };
+    const onDetail = () => {
+        if (detail && !detailLoading) {
+            console.log(detail, detailLoading);
+            navigate(detail);
+        }
+    };
 
     return (
         <MyMenuDetailTd className="detail-popup">
@@ -56,19 +60,8 @@ const MyMenuDetail = ({ onToggle, kor }) => {
                                 : ''}
                         </span>
                     </li>
-                    {/* <li>
-                        <b>메뉴 추가</b>
-                        <span>{''}</span>
-                    </li> */}
                     <li>
-                        <button
-                            onClick={() => {
-                                dispatch(handleDetail({ cate, kor }));
-                                navigate(detail);
-                            }}
-                        >
-                            {cate === 1 ? '음료' : cate === 2 ? '푸드' : '상품'} 정보
-                        </button>
+                        <button onClick={onDetail}>{cate === 1 ? '음료' : cate === 2 ? '푸드' : '상품'} 정보</button>
                     </li>
                 </ul>
             </div>

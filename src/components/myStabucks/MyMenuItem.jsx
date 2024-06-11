@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { MyMenuListTbody, OverlayWrap } from './MyStabucksStyle.js';
 import MyMenuDetail from './MyMenuDetail.jsx';
+import { useDispatch } from 'react-redux';
+import { handleDetail } from '../../store/modules/myStarbucksSlice.js';
 
 const MyMenuItem = ({ menu, index, changeInput }) => {
     const { kor, option, date, isChk, cate } = menu;
+    const dispatch = useDispatch();
     const keyMap = {
         size: '사이즈',
         shot: '샷 추가',
@@ -19,13 +22,14 @@ const MyMenuItem = ({ menu, index, changeInput }) => {
     const onToggle = (kor) => {
         setIsDetail(!isDetail);
         setTab(kor);
+        dispatch(handleDetail({ cate, kor }));
     };
     return (
         <>
             <MyMenuListTbody>
                 {isDetail && (
                     <OverlayWrap>
-                        <MyMenuDetail onToggle={onToggle} kor={kor} />
+                        <MyMenuDetail onToggle={onToggle} kor={kor} cate={cate} />
                     </OverlayWrap>
                 )}
                 <tr>
