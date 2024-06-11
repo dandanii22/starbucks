@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import { Maincon6Wrap } from './MainConStyles';
 
 const Maincon6 = () => {
+    const navigate = useNavigate();
     return (
         <Maincon6Wrap>
             <div className="inner">
@@ -18,7 +20,7 @@ const Maincon6 = () => {
                         <span>*본 상품은 오프라인 선별 매장 및 온라인에 판매하고 있습니다.</span>
                     </p>
                     <p className="more">
-                        <button>자세히 보기</button>
+                        <button onClick={()=>navigate('/product')}>자세히 보기</button>
                     </p>
                 </div>
                 <div className="bgPic">
