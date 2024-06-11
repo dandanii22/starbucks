@@ -55,7 +55,13 @@ const ProductDetail = () => {
           <p className="engname">{thisProduct.eng}</p>
           <p className="desc">{thisProduct.text}</p>
           <p className="btn">
-            <button onClick={() => setContet(!content)}>
+            <button
+              onClick={() =>
+                authed
+                  ? setContet(!content)
+                  : alert("로그인이 필요한 서비스입니다.")
+              }
+            >
               나만의 상품으로 등록
               {content ? (
                 <i className="xi-heart" />

@@ -5,10 +5,12 @@ import data from "../../../assets/api/foodData";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Myfood from "./Myfood";
+import { useDispatch, useSelector } from "react-redux";
 
 const FoodDetail = () => {
   const { foodID, category } = useParams();
   const [content, setContet] = useState(false);
+  const { authed } = useSelector((state) => state.authR);
 
   const navigate = useNavigate();
   const onGo = () => {
@@ -51,7 +53,13 @@ const FoodDetail = () => {
           <p className="engname">{thisFood.eng}</p>
           <p className="desc">{thisFood.desc}</p>
           <p className="btn">
-            <button onClick={() => setContet(!content)}>
+            <button
+              onClick={() =>
+                authed
+                  ? setContet(!content)
+                  : alert("로그인이 필요한 서비스입니다.")
+              }
+            >
               나만의 푸드로 등록
               {content ? (
                 <i className="xi-heart" />
