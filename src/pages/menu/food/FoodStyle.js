@@ -270,7 +270,7 @@ export const Detail = styled.div`
     .mainimg {
       width: 600px;
       height: 600px;
-      margin-right: 165px;
+      margin-right: 140px;
     }
     .text {
       display: flex;
@@ -369,8 +369,8 @@ export const FoodChoice = styled.form`
 
     .myselect {
       background: #f4f4f2;
-      width: 1250px;
-      height: 90px;
+      width: 1130px;
+      height: 150px;
       display: flex;
       align-items: center;
       line-height: 90px;
@@ -385,16 +385,14 @@ export const FoodChoice = styled.form`
         height: 40px;
         border: 1px solid #dddddd;
         border-radius: 5px;
-        option {
-        }
       }
     }
   }
 
   .btnwrap {
     position: absolute;
-    right: 180px;
-    top: 220px;
+    right: 100px;
+    top: 270px;
 
     button {
       width: 77px;

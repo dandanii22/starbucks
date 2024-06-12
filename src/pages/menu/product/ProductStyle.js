@@ -248,12 +248,11 @@ export const Detail = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 20px;
 
     .mainimg {
       width: 600px;
       height: 600px;
-      margin-right: 165px;
+      margin-right: 140px;
     }
     .text {
       display: flex;
@@ -358,8 +357,8 @@ export const ProductChoice = styled.form`
 
     .myselect {
       background: #f4f4f2;
-      width: 1250px;
-      height: 90px;
+      width: 970px;
+      height: 100px;
       display: flex;
       align-items: center;
       line-height: 90px;
@@ -374,16 +373,14 @@ export const ProductChoice = styled.form`
         height: 40px;
         border: 1px solid #dddddd;
         border-radius: 5px;
-        option {
-        }
       }
     }
   }
 
   .btnwrap {
     position: absolute;
-    right: 180px;
-    top: 220px;
+    right: 100px;
+    top: 300px;
 
     button {
       width: 77px;
