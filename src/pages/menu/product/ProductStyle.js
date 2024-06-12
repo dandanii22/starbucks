@@ -351,6 +351,10 @@ export const ProductChoice = styled.form`
     justify-content: start;
     align-items: center;
     margin-left: 173px;
+    img {
+      width: 460px;
+      height: 440px;
+    }
 
     .myselect {
       background: #f4f4f2;
