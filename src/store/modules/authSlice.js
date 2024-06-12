@@ -136,10 +136,12 @@ export const authSlice = createSlice({
                 ...state.logData,
                 {
                     id: no++,
-                    // myReward: {
-                    //     stars: 1,
-                    //     frequency: 1,
-                    // },
+                    myReward: {
+                        stars: 0,
+                        frequency: 0,
+                    },
+                    myCard: [],
+                    myMenus: [],
                     ...action.payload,
                 },
             ];
