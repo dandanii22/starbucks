@@ -13,7 +13,7 @@ const CardSort = ({ goThema, setGoThema }) => {
   const { cardSort, isAllShow, isNewShow, isSeasonalShow } = useSelector(
     (state) => state.card
   );
-  const [isSort, setIsSort] = useState(false);
+  const [isSort, setIsSort] = useState(true);
   const changeSort = () => {
     setIsSort(!isSort);
   };
