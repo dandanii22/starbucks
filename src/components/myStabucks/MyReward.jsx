@@ -36,10 +36,23 @@ const MyReward = () => {
                         <br /> 현재 <b className={`txt-bold ${level === 'Gold' ? 'gold' : level === 'Green' ? 'green' : 'gray'}`}>{level} Level</b>
                         이십니다.
                     </p>
-                    {level !== 'Gold' && (
+                    {/* {level !== 'Gold' && (
                         <span>
                             <b className="txt-bold ">{30 - stars}개</b>의 별★이 더 모이면
                             <br /> <b className={`txt-bold ` + `gold`}>Gold Level</b>만의 특별한 혜택이!
+                        </span>
+                    )} */}
+                    {level === 'Gold' ? (
+                        <span></span>
+                    ) : level === 'Green' ? (
+                        <span>
+                            <b className="txt-bold ">{30 - stars}개</b>의 별★이 더 모이면
+                            <br /> <b className={`txt-bold ` + `gold`}>Gold Level</b>만의 특별한 혜택이!
+                        </span>
+                    ) : (
+                        <span>
+                            <b className="txt-bold ">{5 - stars}개</b>의 별★이 더 모이면
+                            <br /> <b className={`txt-bold ` + `green`}>Green Level</b>만의 특별한 혜택이!
                         </span>
                     )}
                 </div>
