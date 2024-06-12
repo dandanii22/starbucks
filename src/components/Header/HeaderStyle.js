@@ -122,14 +122,14 @@ export const NavWarp = styled.nav`
                         text-decoration-line: underline;
                     }
                 }
-                &.coffee {
-                    margin-left: 430px;
+               &.coffee {
+                    margin-left: 230px;
                 }
                 &.food {
-                    margin-left: 670px;
+                    margin-left: 470px;
                 }
                 &.product {
-                    margin-left: 870px;
+                    margin-left: 670px;
                 }
             }
         }
