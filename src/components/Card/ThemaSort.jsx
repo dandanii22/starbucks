@@ -6,7 +6,7 @@ import ThemaSortList from "./ThemaSortList";
 const ThemaSort = ({ goThema, setGoThema, setCurrentThema, currentThema }) => {
   const dispatch = useDispatch();
   const { cardThemaSort } = useSelector((state) => state.card);
-  const [isSort, setIsSort] = useState(false);
+  const [isSort, setIsSort] = useState(true);
   const changeSort = () => {
     setIsSort(!isSort);
   };
