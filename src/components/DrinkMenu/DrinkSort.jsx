@@ -13,7 +13,7 @@ const DrinkSort = ({ goThema, setGoThema }) => {
   const { drinkSortData, isAllShow, isNewShow, isSeasonalShow } = useSelector(
     (state) => state.drinkMenu
   );
-  const [isSort, setIsSort] = useState(false);
+  const [isSort, setIsSort] = useState(true);
   const changeSort = () => {
     setIsSort(!isSort);
   };
