@@ -62,6 +62,10 @@ export const myCartSlice = createSlice({
             item.isChk ? item : { ...item, isChk: true }
           ));
     },
+     cartOrder: (state, action) => {
+      alert("주문이 완료되었습니다.");
+      state.cart = state.cart.filter((cart) => (cart.isChk ? null : cart));
+    },
   },
 });
 
@@ -75,5 +79,6 @@ export const {
   onChkToggle,
   onChkAll,
   CheckCart,
+    cartOrder,
 } = myCartSlice.actions;
 export default myCartSlice.reducer;
