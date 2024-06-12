@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { MyCarddLi } from './MyStabucksStyle.js';
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useNavigate } from 'react-router-dom';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -19,6 +20,7 @@ const MyCard = () => {
     const { myCard } = user;
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [editCardId, setEditCardId] = useState(null);
     const [newNickName, setNewNickName] = useState('');
@@ -106,7 +108,7 @@ const MyCard = () => {
                                 </em>
                                 카드를 등록하시면 나만의 카드를 사용할 수 있습니다.
                                 <p>
-                                    <button>카드 등록하기</button>
+                                    <button onClick={() => navigate('/card')}>카드 등록하기</button>
                                 </p>
                             </div>
                         </SwiperSlide>
