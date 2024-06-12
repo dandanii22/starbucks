@@ -13,6 +13,7 @@
 - 활용 Skills : <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white" />
 - 활용 Tools : <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=Figma&logoColor=white" /> <img src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Slack&logoColor=white" /> <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white" />
   <br>
+  <br>
 
 ## 🗓️ 진행 기간 및 인원
 
@@ -28,7 +29,8 @@
 - 마이페이지 중요 기능 위주로 디자인 간소화
 - 나만의 음료 등록 시 커스텀 페이지 디자인 변경
 - 서브페이지마다 각각 서브비주얼 추가
-<br>
+  <br>
+
 **- CRUD가 갖춰진 페이지임을 활용해 사이트 제작 및 기능 추가**
 
 - 기존 스타벅스 페이지에는 주문하기 기능이 따로 없었으나, 주문하기 및 장바구니 기능 추가
