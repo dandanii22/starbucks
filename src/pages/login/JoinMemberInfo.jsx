@@ -9,7 +9,6 @@ const JoinMemberInfo = () => {
     const dispatch = useDispatch();
 
     const [user, setUser] = useState({
-        id: '',
         email: '',
         nickName: '',
         password: '',
