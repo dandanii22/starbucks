@@ -17,6 +17,7 @@ export const myCartSlice = createSlice({
     },
     addCart: (state, action) => {
       state.cart.push(action.payload);
+      alert('장바구니에 추가되었습니다.');
     },
     delCart: (state, action) => {
       state.cart = state.cart.filter((item) => item.idx !== action.payload);
@@ -62,6 +63,10 @@ export const myCartSlice = createSlice({
             item.isChk ? item : { ...item, isChk: true }
           ));
     },
+     cartOrder: (state, action) => {
+      alert("주문이 완료되었습니다.");
+      state.cart = state.cart.filter((cart) => (cart.isChk ? null : cart));
+    },
   },
 });
 
@@ -75,5 +80,6 @@ export const {
   onChkToggle,
   onChkAll,
   CheckCart,
+    cartOrder,
 } = myCartSlice.actions;
 export default myCartSlice.reducer;

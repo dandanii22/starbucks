@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { delAll } from "../../store/modules/myCartSlice";
+import { cartOrder, delAll } from "../../store/modules/myCartSlice";
 
 const MyCartTotal = () => {
   const { totalNum, totalPrice } = useSelector((state) => state.myCart);
@@ -19,7 +19,7 @@ const MyCartTotal = () => {
         </span>
       </p>
       <button onClick={() => dispatch(delAll())}>전체삭제</button>
-      <button onClick={() => alert("주문이 완료되었습니다.")}>주문하기</button>
+      <button onClick={() => dispatch(cartOrder())}>주문하기</button>
     </div>
   );
 };
