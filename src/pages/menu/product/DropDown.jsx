@@ -5,6 +5,7 @@ const DropDown = ({ showNew, setShowNew }) => {
         <input
           type="checkbox"
           name="new"
+          id="select"
           onChange={(e) => {
             setShowNew({
               ...showNew,
@@ -12,13 +13,16 @@ const DropDown = ({ showNew, setShowNew }) => {
             });
           }}
         />
-        <img src="../../public/images/food/mark01.png" />
-        신규출시된메뉴
+        <label htmlFor="select">
+          <img src="../../public/images/food/mark01.png" />
+          신규출시된메뉴
+        </label>
       </li>
       <li>
         <input
           type="checkbox"
           name="limited"
+          id="select2"
           onChange={(e) => {
             console.log(e.target.checked);
             setShowNew({
@@ -27,8 +31,10 @@ const DropDown = ({ showNew, setShowNew }) => {
             });
           }}
         />
-        <img src="../../public/images/food/mark02.png" />
-        한정기간출시되는메뉴
+        <label htmlFor="select2">
+          <img src="../../public/images/food/mark02.png" />
+          한정기간출시되는메뉴
+        </label>
       </li>
     </>
   );

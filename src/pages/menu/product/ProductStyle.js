@@ -157,8 +157,26 @@ export const SelectBox = styled.div`
 
     li {
       input[type="checkbox"] {
-        margin-right: 5px;
+        display: none;
       }
+      label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding-left: 21px;
+        background-repeat: no-repeat;
+        background-position: 0.4%;
+        background-image: url("../../public/images/drink/ck_icon.jpg");
+        user-select: none;
+      }
+      input[type="checkbox"]:checked + label {
+        cursor: pointer;
+        padding-left: 21px;
+        background-repeat: no-repeat;
+        background-position: 0.4%;
+        background-image: url("../../public/images/drink/ck_icon_on.jpg");
+      }
+
       img {
         width: 30px;
         height: 30px;
@@ -175,7 +193,6 @@ export const SelectBox = styled.div`
       }
       &:last-child {
         border-bottom: none;
-        padding-bottom: none;
       }
     }
   }

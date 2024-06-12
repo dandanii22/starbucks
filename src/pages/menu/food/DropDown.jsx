@@ -5,6 +5,7 @@ const DropDown = ({ showNew, setShowNew }) => {
         <input
           type="checkbox"
           name="new"
+          id="select"
           onChange={(e) => {
             console.log(e.target.checked);
             setShowNew({
@@ -13,8 +14,11 @@ const DropDown = ({ showNew, setShowNew }) => {
             });
           }}
         />
-        <img src="../../public/images/food/mark01.png" />
-        신규출시된메뉴
+
+        <label htmlFor="select">
+          <img src="../../public/images/food/mark01.png" />
+          신규출시된메뉴
+        </label>
       </li>
     </>
   );
