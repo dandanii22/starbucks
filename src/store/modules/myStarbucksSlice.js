@@ -116,8 +116,20 @@ export const myStarbucksSlice = createSlice({
                 alert('등록이 완료되었습니다.');
             }
         },
+         addMycard: (state, action) => {
+        const existingCard = state.user.myMenus.find(
+            (menu) => menu.kor === action.payload.kor
+          );
+          if (existingCard || existingCard !== undefined) {
+            alert("이미 추가하신 카드입니다.");
+          } else {
+            state.user.myCard.push(action.payload);
+            localStorage.setItem("user", JSON.stringify(state.user));
+            alert("등록이 완료되었습니다.");
+          }
+    },
     },
 });
 
-export const { setUser, rewards, onToggle, myMenuChange, myMenuDel, updateCardNickname, rechargeCard, handleDetail, addMymenus } = myStarbucksSlice.actions;
+export const { setUser, rewards, onToggle, myMenuChange, myMenuDel, updateCardNickname, rechargeCard, handleDetail, addMymenus,addMycard } = myStarbucksSlice.actions;
 export default myStarbucksSlice.reducer;
