@@ -17,6 +17,7 @@ export const myCartSlice = createSlice({
     },
     addCart: (state, action) => {
       state.cart.push(action.payload);
+      alert('장바구니에 추가되었습니다.');
     },
     delCart: (state, action) => {
       state.cart = state.cart.filter((item) => item.idx !== action.payload);
