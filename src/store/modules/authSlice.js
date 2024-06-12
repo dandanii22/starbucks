@@ -96,7 +96,7 @@ const initialState = {
     isChk: localStorage.getItem('isChk') ? JSON.parse(localStorage.getItem('isChk')) : false,
 };
 
-let no = 2;
+let no = 3;
 
 export const authSlice = createSlice({
     name: 'auth',
