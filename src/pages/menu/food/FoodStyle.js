@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import img from "../../../../public/images/subvisual/foodsubvisual.jpg";
 
 export const SubVisualWrap = styled.div`
   height: 405px;
-  background-image: url(${img});
+  background-image: url("./images/subvisual/foodsubvisual.jpg");
   background-repeat: no-repeat;
   background-position: 0, 0;
   background-size: cover;
@@ -122,14 +121,14 @@ export const FoodForm = styled.div`
         padding-left: 21px;
         background-repeat: no-repeat;
         background-position: 0 35%;
-        background-image: url("../../public/images/drink/ck_icon.jpg");
+        background-image: url("./images/drink/ck_icon.jpg");
       }
       input[type="checkbox"]:checked + label {
         cursor: pointer;
         padding-left: 21px;
         background-repeat: no-repeat;
         background-position: 0 35%;
-        background-image: url("../../public/images/drink/ck_icon_on.jpg");
+        background-image: url("./images/drink/ck_icon_on.jpg");
       }
     }
   }
@@ -180,7 +179,7 @@ export const SelectBox = styled.div`
         padding-left: 21px;
         background-repeat: no-repeat;
         background-position: 0.4%;
-        background-image: url("../../public/images/drink/ck_icon.jpg");
+        background-image: url("./images/drink/ck_icon.jpg");
         user-select: none;
       }
       input[type="checkbox"]:checked + label {
@@ -188,7 +187,7 @@ export const SelectBox = styled.div`
         padding-left: 21px;
         background-repeat: no-repeat;
         background-position: 0.4%;
-        background-image: url("../../public/images/drink/ck_icon_on.jpg");
+        background-image: url("./images/drink/ck_icon_on.jpg");
       }
 
       img {

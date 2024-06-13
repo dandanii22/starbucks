@@ -16,7 +16,7 @@ const DropDown = ({ showNew, setShowNew }) => {
         />
 
         <label htmlFor="select">
-          <img src="../../public/images/food/mark01.png" />
+          <img src="./images/food/mark01.png" />
           신규출시된메뉴
         </label>
       </li>

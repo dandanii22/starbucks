@@ -136,7 +136,7 @@ const DrinkMenuDetail = () => {
 
         <div className="recommend">
           <p className="recommendP">
-            <img src="../../public/images/drink/041.png" alt="" />
+            <img src="./images/drink/041.png" alt="" />
             <span>오늘의 추천음료</span>
           </p>
           <div className="recommendImg">
