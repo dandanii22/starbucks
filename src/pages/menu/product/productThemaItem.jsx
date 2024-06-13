@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const productThemaItem = ({ data }) => {
   const { imgurl, title, kor, id } = data;
   return (
-    <Link to={`/product/${imgurl.split("/")[4]}/${id}`}>
+    <Link to={`/product/${imgurl.split("/")[3]}/${id}`}>
       <li>
         <div className="lidiv">
           <img src={imgurl} alt={title} />
