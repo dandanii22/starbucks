@@ -1,4 +1,4 @@
-import { SubVisualWrap } from "../pages/card/card";
+import { SubVisualWrap } from "../pages/card/cardStyle";
 
 const SubVisual = () => {
   return (
