@@ -1,4 +1,4 @@
-import { CartWrap } from "./card";
+import { CartWrap } from "./cardStyle";
 import CardSubVisual from "../../components/CardSubVisual";
 import CardInner from "../../components/Card/CardInner";
 
