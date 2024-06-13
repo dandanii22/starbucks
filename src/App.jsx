@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import GlobalStyle from "./styled/GlobalStyle";
 import Layout from "./components/Layout";
 import FoodForm from "./pages/menu/food/FoodForm";
