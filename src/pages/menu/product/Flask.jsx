@@ -10,7 +10,7 @@ const Flask = ({ showNew }) => {
         <ul>
           {showNew.new === true || showNew.limited === true
             ? data.map((item) => {
-                if (item?.category === "thermos") {
+                if (item?.category === "flask") {
                   return item?.data?.map((item2) => {
                     if (
                       (showNew.new && item2.icon === "new") ||
@@ -31,7 +31,7 @@ const Flask = ({ showNew }) => {
                 }
               })
             : data?.map((item) => {
-                if (item?.category === "thermos") {
+                if (item?.category === "flask") {
                   return item?.data?.map((item2) => {
                     return (
                       <Link to={`${item.category}/${item2.id}`}>
