@@ -78,13 +78,13 @@ export const MyCartListWrap = styled.div`
     padding-left: 21px;
     background-repeat: no-repeat;
     background-position: 0 35%;
-    background-image: url("../../public/images/drink/ck_icon.jpg");
+    background-image: url("./images/drink/ck_icon.jpg");
   }
   input[type="checkbox"]:checked + label {
     cursor: pointer;
     padding-left: 21px;
     background-repeat: no-repeat;
     background-position: 0 35%;
-    background-image: url("../../public/images/drink/ck_icon_on.jpg");
+    background-image: url("./images/drink/ck_icon_on.jpg");
   }
 `;
